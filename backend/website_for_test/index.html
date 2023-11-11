@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crime Map Test</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #mapid { height: 400px; } /* Set the height of the map */
+    </style>
+</head>
+<body>
+    <div id="mapid"></div> <!-- Map container -->
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(mymap);
+
+        function onMapClick(e) {
+            var wardName = 'SomeWard'; // Replace with dynamic values as needed
+            var boroughName = 'SomeBorough'; // Replace with dynamic values as needed
+
+            var apiUrl = `http://xxxxxxxxxx:xxxx/crime-data?wardName=${wardName}&boroughName=${boroughName}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Create a marker and add it to the map
+                    var marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(mymap);
+
+                    // Create a popup with the data and open it
+                    marker.bindPopup(
+                        `<b>Ward:</b> ${data.WardName}<br>` +
+                        `<b>Borough:</b> ${data.LookUp_BoroughName}<br>` +
+                        `<b>Total Robbery Cases:</b> ${data.TotalRobberyCases}<br>` +
+                        `<b>Total Theft Cases:</b> ${data.TotalTheftCases}<br>` +
+                        `<b>Total Cases:</b> ${data.TotalCases}<br>` +
+                        `<b>Avg Response Time I:</b> ${data.AvgResponseI}<br>` +
+                        `<b>Avg Response Time S:</b> ${data.AvgResponseS}<br>` +
+                        `<b>Avg Response Time E:</b> ${data.AvgResponseE}<br>` +
+                        `<b>Crimes Per Thousand:</b> ${data.CrimesPerThousand}`
+                    ).openPopup();
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        mymap.on('click', onMapClick);
+    </script>
+</body>
+</html>
