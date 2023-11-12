@@ -1,0 +1,680 @@
+WardName,BoroughName,TotalRobberyCases,TotalTheftCases,"ROUND(t1.AvgResponseI,2)","ROUND(t1.AvgResponseS,1)","ROUND(t1.AvgResponseE,1)",CrimeRate
+Abbey,"Barking and Dagenham",28,356,900.73,9795.1,121301.1,96.85
+Alibon,"Barking and Dagenham",15,55,900.73,9795.1,121301.1,7.08
+"Barking Riverside","Barking and Dagenham",23,291,900.73,9795.1,121301.1,31.21
+Beam,"Barking and Dagenham",23,58,900.73,9795.1,121301.1,9.69
+Becontree,"Barking and Dagenham",14,64,900.73,9795.1,121301.1,7.97
+"Chadwell Heath","Barking and Dagenham",28,72,900.73,9795.1,121301.1,7.23
+"Eastbrook & Rush Green","Barking and Dagenham",5,49,900.73,9795.1,121301.1,6.17
+Eastbury,"Barking and Dagenham",24,186,900.73,9795.1,121301.1,13.35
+Gascoigne,"Barking and Dagenham",14,87,900.73,9795.1,121301.1,9.43
+Goresbrook,"Barking and Dagenham",38,103,900.73,9795.1,121301.1,10.30
+Heath,"Barking and Dagenham",15,75,900.73,9795.1,121301.1,9.87
+Longbridge,"Barking and Dagenham",16,102,900.73,9795.1,121301.1,8.88
+Mayesbrook,"Barking and Dagenham",33,85,900.73,9795.1,121301.1,7.55
+Northbury,"Barking and Dagenham",68,184,900.73,9795.1,121301.1,19.11
+Parsloes,"Barking and Dagenham",48,77,900.73,9795.1,121301.1,8.24
+"Thames View","Barking and Dagenham",14,35,900.73,9795.1,121301.1,8.67
+Valence,"Barking and Dagenham",24,182,900.73,9795.1,121301.1,13.52
+Village,"Barking and Dagenham",31,89,900.73,9795.1,121301.1,9.49
+Whalebone,"Barking and Dagenham",24,88,900.73,9795.1,121301.1,7.89
+"Barnet Vale",Barnet,9,62,845.28,7771.8,236251.2,4.16
+"Brunswick Park",Barnet,20,76,845.28,7771.8,236251.2,5.95
+"Burnt Oak",Barnet,11,105,845.28,7771.8,236251.2,5.38
+"Childs Hill",Barnet,24,273,845.28,7771.8,236251.2,15.32
+"Colindale North",Barnet,7,50,845.28,7771.8,236251.2,4.48
+"Colindale South",Barnet,21,107,845.28,7771.8,236251.2,6.74
+Cricklewood,Barnet,23,236,845.28,7771.8,236251.2,24.87
+"East Barnet",Barnet,6,136,845.28,7771.8,236251.2,7.85
+"East Finchley",Barnet,20,122,845.28,7771.8,236251.2,8.70
+Edgware,Barnet,31,196,845.28,7771.8,236251.2,11.48
+Edgwarebury,Barnet,8,43,845.28,7771.8,236251.2,4.13
+"Finchley Church End",Barnet,9,100,845.28,7771.8,236251.2,5.79
+"Friern Barnet",Barnet,27,115,845.28,7771.8,236251.2,7.45
+"Garden Suburb",Barnet,11,64,845.28,7771.8,236251.2,5.92
+"Golders Green",Barnet,4,77,845.28,7771.8,236251.2,5.35
+Hendon,Barnet,32,202,845.28,7771.8,236251.2,10.65
+"High Barnet",Barnet,10,115,845.28,7771.8,236251.2,10.41
+"Mill Hill",Barnet,18,191,845.28,7771.8,236251.2,11.73
+"Totteridge & Woodside",Barnet,5,38,845.28,7771.8,236251.2,2.89
+Underhill,Barnet,8,44,845.28,7771.8,236251.2,4.23
+"West Finchley",Barnet,25,245,845.28,7771.8,236251.2,13.91
+"West Hendon",Barnet,15,325,845.28,7771.8,236251.2,19.70
+Whetstone,Barnet,8,50,845.28,7771.8,236251.2,5.33
+Woodhouse,Barnet,36,150,845.28,7771.8,236251.2,13.13
+Barnehurst,Bexley,7,30,709.61,6088.7,129225.1,3.16
+Belvedere,Bexley,11,153,709.61,6088.7,129225.1,9.34
+Bexleyheath,Bexley,34,250,709.61,6088.7,129225.1,17.85
+"Blackfen & Lamorbey",Bexley,8,53,709.61,6088.7,129225.1,3.78
+"Blendon & Penhill",Bexley,2,73,709.61,6088.7,129225.1,4.82
+Crayford,Bexley,14,116,709.61,6088.7,129225.1,8.15
+"Crook Log",Bexley,7,87,709.61,6088.7,129225.1,5.92
+"East Wickham",Bexley,9,28,709.61,6088.7,129225.1,2.28
+Erith,Bexley,12,187,709.61,6088.7,129225.1,15.51
+"Falconwood & Welling",Bexley,9,100,709.61,6088.7,129225.1,6.57
+Longlands,Bexley,0,17,709.61,6088.7,129225.1,1.69
+"Northumberland Heath",Bexley,4,56,709.61,6088.7,129225.1,5.43
+Sidcup,Bexley,14,144,709.61,6088.7,129225.1,10.05
+"Slade Green & Northend",Bexley,13,87,709.61,6088.7,129225.1,7.76
+"St Mary's & St James",Bexley,1,29,709.61,6088.7,129225.1,2.76
+"Thamesmead East",Bexley,20,65,709.61,6088.7,129225.1,5.34
+"West Heath",Bexley,3,18,709.61,6088.7,129225.1,1.34
+Alperton,Brent,16,143,729.34,8114.9,188846.3,10.59
+Barnhill,Brent,24,196,729.34,8114.9,188846.3,19.27
+"Brondesbury Park",Brent,35,103,729.34,8114.9,188846.3,10.15
+"Cricklewood & Mapesbury",Brent,29,144,729.34,8114.9,188846.3,12.39
+"Dollis Hill",Brent,34,179,729.34,8114.9,188846.3,9.84
+"Harlesden & Kensal Green",Brent,58,241,729.34,8114.9,188846.3,14.87
+Kenton,Brent,9,68,729.34,8114.9,188846.3,4.35
+Kilburn,Brent,31,241,729.34,8114.9,188846.3,15.81
+Kingsbury,Brent,11,133,729.34,8114.9,188846.3,12.59
+"Northwick Park",Brent,7,87,729.34,8114.9,188846.3,7.75
+Preston,Brent,10,65,729.34,8114.9,188846.3,6.02
+"Queens Park",Brent,55,244,729.34,8114.9,188846.3,17.48
+Queensbury,Brent,14,154,729.34,8114.9,188846.3,9.96
+Roundwood,Brent,27,133,729.34,8114.9,188846.3,9.61
+Stonebridge,Brent,37,340,729.34,8114.9,188846.3,18.66
+Sudbury,Brent,7,55,729.34,8114.9,188846.3,4.49
+Tokyngton,Brent,4,58,729.34,8114.9,188846.3,6.25
+"Welsh Harp",Brent,17,136,729.34,8114.9,188846.3,8.39
+"Wembley Central",Brent,32,242,729.34,8114.9,188846.3,15.21
+"Wembley Hill",Brent,25,277,729.34,8114.9,188846.3,19.43
+"Wembley Park",Brent,16,371,729.34,8114.9,188846.3,50.68
+"Willesden Green",Brent,50,236,729.34,8114.9,188846.3,14.91
+"Beckenham Town & Copers Cope",Bromley,15,118,845.64,3171.0,135745.6,8.28
+"Bickley & Sundridge",Bromley,2,53,845.64,3171.0,135745.6,3.09
+"Biggin Hill",Bromley,7,93,845.64,3171.0,135745.6,9.16
+"Bromley Common & Holwood",Bromley,3,96,845.64,3171.0,135745.6,5.22
+"Bromley Town",Bromley,42,642,845.64,3171.0,135745.6,43.22
+Chelsfield,Bromley,1,38,845.64,3171.0,135745.6,3.39
+Chislehurst,Bromley,6,60,845.64,3171.0,135745.6,4.25
+"Clock House",Bromley,7,101,845.64,3171.0,135745.6,6.31
+"Crystal Palace & Anerley",Bromley,23,124,845.64,3171.0,135745.6,12.18
+Darwin,Bromley,1,16,845.64,3171.0,135745.6,3.09
+"Farnborough & Crofton",Bromley,6,158,845.64,3171.0,135745.6,9.22
+"Hayes & Coney Hall",Bromley,7,49,845.64,3171.0,135745.6,3.55
+"Kelsey & Eden Park",Bromley,17,164,845.64,3171.0,135745.6,11.70
+Mottingham,Bromley,8,65,845.64,3171.0,135745.6,6.34
+Orpington,Bromley,12,214,845.64,3171.0,135745.6,18.42
+"Penge & Cator",Bromley,25,186,845.64,3171.0,135745.6,11.05
+"Petts Wood & Knoll",Bromley,7,59,845.64,3171.0,135745.6,3.91
+Plaistow,Bromley,9,172,845.64,3171.0,135745.6,14.11
+"Shortlands & Park Langley",Bromley,13,55,845.64,3171.0,135745.6,4.08
+"St Mary Cray",Bromley,23,222,845.64,3171.0,135745.6,13.13
+"St Paul's Cray",Bromley,20,162,845.64,3171.0,135745.6,10.72
+"West Wickham",Bromley,6,64,845.64,3171.0,135745.6,4.74
+Belsize,Camden,15,142,610.37,3386.2,56489.2,12.96
+Bloomsbury,Camden,148,2247,610.37,3386.2,56489.2,210.70
+"Camden Square",Camden,8,143,610.37,3386.2,56489.2,21.31
+"Camden Town",Camden,135,869,610.37,3386.2,56489.2,147.43
+"Fortune Green",Camden,18,93,610.37,3386.2,56489.2,9.59
+Frognal,Camden,6,52,610.37,3386.2,56489.2,7.50
+"Gospel Oak",Camden,20,176,610.37,3386.2,56489.2,16.73
+"Hampstead Town",Camden,19,187,610.37,3386.2,56489.2,25.46
+Haverstock,Camden,19,174,610.37,3386.2,56489.2,16.11
+Highgate,Camden,31,94,610.37,3386.2,56489.2,12.22
+"Holborn & Covent Garden",Camden,114,1858,610.37,3386.2,56489.2,191.01
+"Kentish Town North",Camden,12,96,610.37,3386.2,56489.2,14.79
+"Kentish Town South",Camden,20,245,610.37,3386.2,56489.2,25.72
+Kilburn,Camden,37,395,610.37,3386.2,56489.2,35.97
+"King's Cross",Camden,82,922,610.37,3386.2,56489.2,87.67
+"Primrose Hill",Camden,23,205,610.37,3386.2,56489.2,18.33
+"Regent's Park",Camden,70,576,610.37,3386.2,56489.2,54.16
+"South Hampstead",Camden,21,194,610.37,3386.2,56489.2,17.86
+"St Pancras & Somers Town",Camden,34,284,610.37,3386.2,56489.2,25.52
+"West Hampstead",Camden,20,322,610.37,3386.2,56489.2,30.56
+"Addiscombe East",Croydon,18,92,654.83,5163.9,140745.8,9.33
+"Addiscombe West",Croydon,16,92,654.83,5163.9,140745.8,6.90
+"Bensham Manor",Croydon,16,80,654.83,5163.9,140745.8,5.67
+"Broad Green",Croydon,55,311,654.83,5163.9,140745.8,18.23
+"Coulsdon Town",Croydon,8,58,654.83,5163.9,140745.8,4.32
+"Crystal Palace & Upper Norwood",Croydon,17,76,654.83,5163.9,140745.8,5.71
+Fairfield,Croydon,189,904,654.83,5163.9,140745.8,69.38
+Kenley,Croydon,1,51,654.83,5163.9,140745.8,5.00
+"New Addington North",Croydon,5,32,654.83,5163.9,140745.8,3.32
+"New Addington South",Croydon,7,78,654.83,5163.9,140745.8,7.60
+"Norbury & Pollards Hill",Croydon,29,67,654.83,5163.9,140745.8,7.70
+"Norbury Park",Croydon,22,82,654.83,5163.9,140745.8,9.85
+"Old Coulsdon",Croydon,6,28,654.83,5163.9,140745.8,3.48
+"Park Hill & Whitgift",Croydon,7,14,654.83,5163.9,140745.8,3.64
+"Purley & Woodcote",Croydon,21,131,654.83,5163.9,140745.8,9.18
+"Purley Oaks & Riddlesdown",Croydon,4,33,654.83,5163.9,140745.8,3.52
+Sanderstead,Croydon,3,25,654.83,5163.9,140745.8,1.81
+Selhurst,Croydon,20,107,654.83,5163.9,140745.8,9.82
+"Selsdon & Addington Village",Croydon,3,43,654.83,5163.9,140745.8,4.46
+"Selsdon Vale & Forestdale",Croydon,9,70,654.83,5163.9,140745.8,8.14
+"Shirley North",Croydon,6,100,654.83,5163.9,140745.8,6.91
+"Shirley South",Croydon,6,49,654.83,5163.9,140745.8,5.10
+"South Croydon",Croydon,26,118,654.83,5163.9,140745.8,8.38
+"South Norwood",Croydon,28,175,654.83,5163.9,140745.8,12.29
+"Thornton Heath",Croydon,27,104,654.83,5163.9,140745.8,7.28
+Waddon,Croydon,34,184,654.83,5163.9,140745.8,11.79
+"West Thornton",Croydon,38,175,654.83,5163.9,140745.8,11.35
+Woodside,Croydon,23,114,654.83,5163.9,140745.8,8.03
+"Central Greenford",Ealing,17,126,711.19,8044.8,142769.5,10.24
+"Dormers Wells",Ealing,7,49,711.19,8044.8,142769.5,3.69
+"Ealing Broadway",Ealing,43,441,711.19,8044.8,142769.5,34.01
+"Ealing Common",Ealing,7,90,711.19,8044.8,142769.5,6.15
+"East Acton",Ealing,10,108,711.19,8044.8,142769.5,7.37
+"Greenford Broadway",Ealing,24,122,711.19,8044.8,142769.5,8.57
+"Hanger Hill",Ealing,18,87,711.19,8044.8,142769.5,6.24
+"Hanwell Broadway",Ealing,19,128,711.19,8044.8,142769.5,9.74
+"Lady Margaret",Ealing,10,61,711.19,8044.8,142769.5,4.40
+"North Acton",Ealing,22,382,711.19,8044.8,142769.5,21.99
+"North Greenford",Ealing,2,155,711.19,8044.8,142769.5,9.73
+"North Hanwell",Ealing,13,57,711.19,8044.8,142769.5,4.65
+Northfield,Ealing,11,59,711.19,8044.8,142769.5,4.84
+"Northolt Mandeville",Ealing,17,88,711.19,8044.8,142769.5,6.05
+"Northolt West End",Ealing,14,83,711.19,8044.8,142769.5,5.87
+"Norwood Green",Ealing,18,99,711.19,8044.8,142769.5,7.57
+Perivale,Ealing,12,196,711.19,8044.8,142769.5,12.83
+Pitshanger,Ealing,12,41,711.19,8044.8,142769.5,3.49
+"South Acton",Ealing,16,289,711.19,8044.8,142769.5,17.83
+"Southall Broadway",Ealing,33,325,711.19,8044.8,142769.5,32.65
+"Southall Green",Ealing,26,107,711.19,8044.8,142769.5,8.14
+"Southall West",Ealing,2,47,711.19,8044.8,142769.5,7.20
+Southfield,Ealing,32,89,711.19,8044.8,142769.5,7.45
+Walpole,Ealing,33,136,711.19,8044.8,142769.5,11.53
+"Arnos Grove",Enfield,7,37,941.09,11848.6,92033.1,4.96
+Bowes,Enfield,8,44,941.09,11848.6,92033.1,4.85
+Brimsdown,Enfield,27,172,941.09,11848.6,92033.1,12.22
+Bullsmoor,Enfield,7,86,941.09,11848.6,92033.1,8.18
+"Bush Hill Park",Enfield,10,53,941.09,11848.6,92033.1,4.84
+Carterhatch,Enfield,17,241,941.09,11848.6,92033.1,20.14
+Cockfosters,Enfield,7,77,941.09,11848.6,92033.1,8.27
+"Edmonton Green",Enfield,49,310,941.09,11848.6,92033.1,21.05
+"Enfield Lock",Enfield,10,91,941.09,11848.6,92033.1,5.65
+"Grange Park",Enfield,5,27,941.09,11848.6,92033.1,3.72
+Haselbury,Enfield,23,105,941.09,11848.6,92033.1,6.99
+Highfield,Enfield,12,22,941.09,11848.6,92033.1,3.56
+Jubilee,Enfield,15,81,941.09,11848.6,92033.1,5.86
+"Lower Edmonton",Enfield,26,83,941.09,11848.6,92033.1,6.60
+"New Southgate",Enfield,10,54,941.09,11848.6,92033.1,5.76
+Oakwood,Enfield,11,34,941.09,11848.6,92033.1,5.18
+"Palmers Green",Enfield,16,158,941.09,11848.6,92033.1,16.06
+"Ponders End",Enfield,23,188,941.09,11848.6,92033.1,15.63
+Ridgeway,Enfield,6,37,941.09,11848.6,92033.1,3.36
+Southbury,Enfield,16,134,941.09,11848.6,92033.1,9.78
+Southgate,Enfield,18,70,941.09,11848.6,92033.1,5.78
+Town,Enfield,23,239,941.09,11848.6,92033.1,19.65
+"Upper Edmonton",Enfield,39,258,941.09,11848.6,92033.1,17.65
+Whitewebbs,Enfield,9,76,941.09,11848.6,92033.1,5.91
+"Winchmore Hill",Enfield,5,39,941.09,11848.6,92033.1,4.21
+"Abbey Wood",Greenwich,24,164,709.75,7087.7,122867.0,10.79
+"Blackheath Westcombe",Greenwich,20,79,709.75,7087.7,122867.0,6.62
+"Charlton Hornfair",Greenwich,6,38,709.75,7087.7,122867.0,3.51
+"Charlton Village & Riverside",Greenwich,14,117,709.75,7087.7,122867.0,12.72
+"East Greenwich",Greenwich,26,192,709.75,7087.7,122867.0,15.11
+"Eltham Page",Greenwich,8,103,709.75,7087.7,122867.0,11.16
+"Eltham Park & Progress",Greenwich,6,61,709.75,7087.7,122867.0,6.41
+"Eltham Town & Avery Hill",Greenwich,22,178,709.75,7087.7,122867.0,12.88
+"Greenwich Creekside",Greenwich,16,193,709.75,7087.7,122867.0,18.64
+"Greenwich Park",Greenwich,32,326,709.75,7087.7,122867.0,34.58
+"Greenwich Peninsula",Greenwich,52,465,709.75,7087.7,122867.0,45.03
+"Kidbrooke Park",Greenwich,9,69,709.75,7087.7,122867.0,7.68
+"Kidbrooke Village & Sutcliffe",Greenwich,15,76,709.75,7087.7,122867.0,15.32
+"Middle Park & Horn Park",Greenwich,11,41,709.75,7087.7,122867.0,5.33
+"Mottingham, Coldharbour & New Eltham",Greenwich,4,43,709.75,7087.7,122867.0,3.24
+"Plumstead & Glyndon",Greenwich,26,153,709.75,7087.7,122867.0,8.22
+"Plumstead Common",Greenwich,9,79,709.75,7087.7,122867.0,5.63
+"Shooters Hill",Greenwich,10,64,709.75,7087.7,122867.0,6.23
+"Thamesmead Moorings",Greenwich,9,173,709.75,7087.7,122867.0,14.69
+"West Thamesmead",Greenwich,8,66,709.75,7087.7,122867.0,6.27
+"Woolwich Arsenal",Greenwich,62,375,709.75,7087.7,122867.0,35.76
+"Woolwich Common",Greenwich,12,90,709.75,7087.7,122867.0,7.80
+"Woolwich Dockyard",Greenwich,10,67,709.75,7087.7,122867.0,6.76
+Brownswood,Hackney,36,171,598.98,4021.3,62433.2,23.03
+Cazenove,Hackney,15,113,598.98,4021.3,62433.2,8.41
+Clissold,Hackney,27,151,598.98,4021.3,62433.2,14.24
+Dalston,Hackney,52,438,598.98,4021.3,62433.2,54.37
+"De Beauvoir",Hackney,10,170,598.98,4021.3,62433.2,19.94
+"Hackney Central",Hackney,52,336,598.98,4021.3,62433.2,30.10
+"Hackney Downs",Hackney,29,123,598.98,4021.3,62433.2,11.70
+"Hackney Wick",Hackney,45,217,598.98,4021.3,62433.2,21.20
+Haggerston,Hackney,30,305,598.98,4021.3,62433.2,23.21
+Homerton,Hackney,45,301,598.98,4021.3,62433.2,26.21
+"Hoxton East & Shoreditch",Hackney,160,948,598.98,4021.3,62433.2,91.65
+"Hoxton West",Hackney,56,314,598.98,4021.3,62433.2,26.81
+"King's Park",Hackney,30,105,598.98,4021.3,62433.2,10.16
+"Lea Bridge",Hackney,46,223,598.98,4021.3,62433.2,18.61
+"London Fields",Hackney,24,383,598.98,4021.3,62433.2,33.07
+Shacklewell,Hackney,16,87,598.98,4021.3,62433.2,11.74
+Springfield,Hackney,28,149,598.98,4021.3,62433.2,11.54
+"Stamford Hill West",Hackney,12,68,598.98,4021.3,62433.2,7.76
+"Stoke Newington",Hackney,23,134,598.98,4021.3,62433.2,11.57
+Victoria,Hackney,27,163,598.98,4021.3,62433.2,15.53
+"Woodberry Down",Hackney,39,169,598.98,4021.3,62433.2,16.87
+Addison,"Hammersmith and Fulham",27,190,583.45,5448.4,78403.1,27.79
+Avonmore,"Hammersmith and Fulham",5,79,583.45,5448.4,78403.1,11.15
+"Brook Green","Hammersmith and Fulham",9,109,583.45,5448.4,78403.1,14.59
+"College Park & Old Oak","Hammersmith and Fulham",24,162,583.45,5448.4,78403.1,18.62
+Coningham,"Hammersmith and Fulham",11,117,583.45,5448.4,78403.1,11.84
+"Fulham Reach","Hammersmith and Fulham",15,205,583.45,5448.4,78403.1,18.99
+"Fulham Town","Hammersmith and Fulham",5,101,583.45,5448.4,78403.1,14.20
+Grove,"Hammersmith and Fulham",5,80,583.45,5448.4,78403.1,11.42
+"Hammersmith Broadway","Hammersmith and Fulham",26,523,583.45,5448.4,78403.1,71.85
+Lillie,"Hammersmith and Fulham",11,97,583.45,5448.4,78403.1,16.24
+Munster,"Hammersmith and Fulham",2,81,583.45,5448.4,78403.1,6.68
+"Palace & Hurlingham","Hammersmith and Fulham",16,89,583.45,5448.4,78403.1,9.13
+"Parsons Green & Sandford","Hammersmith and Fulham",7,86,583.45,5448.4,78403.1,11.75
+Ravenscourt,"Hammersmith and Fulham",7,106,583.45,5448.4,78403.1,16.19
+"Sands End","Hammersmith and Fulham",6,73,583.45,5448.4,78403.1,7.23
+"Shepherd's Bush Green","Hammersmith and Fulham",49,785,583.45,5448.4,78403.1,148.32
+"Walham Green","Hammersmith and Fulham",14,190,583.45,5448.4,78403.1,26.35
+"Wendell Park","Hammersmith and Fulham",1,35,583.45,5448.4,78403.1,4.84
+"West Kensington","Hammersmith and Fulham",12,87,583.45,5448.4,78403.1,10.43
+"White City","Hammersmith and Fulham",13,90,583.45,5448.4,78403.1,10.01
+Wormholt,"Hammersmith and Fulham",10,44,583.45,5448.4,78403.1,6.91
+"Alexandra Park",Haringey,40,48,844.95,11446.2,101429.7,9.71
+"Bounds Green",Haringey,13,196,844.95,11446.2,101429.7,21.44
+"Bruce Castle",Haringey,42,170,844.95,11446.2,101429.7,15.11
+"Crouch End",Haringey,11,132,844.95,11446.2,101429.7,11.02
+"Fortis Green",Haringey,15,48,844.95,11446.2,101429.7,4.89
+Harringay,Haringey,43,250,844.95,11446.2,101429.7,20.32
+"Hermitage & Gardens",Haringey,26,227,844.95,11446.2,101429.7,28.28
+Highgate,Haringey,25,107,844.95,11446.2,101429.7,10.58
+Hornsey,Haringey,13,117,844.95,11446.2,101429.7,8.83
+"Muswell Hill",Haringey,28,131,844.95,11446.2,101429.7,17.99
+"Noel Park",Haringey,93,694,844.95,11446.2,101429.7,57.52
+"Northumberland Park",Haringey,48,173,844.95,11446.2,101429.7,14.89
+"Seven Sisters",Haringey,31,131,844.95,11446.2,101429.7,17.22
+"South Tottenham",Haringey,59,279,844.95,11446.2,101429.7,19.74
+"St Ann's",Haringey,16,84,844.95,11446.2,101429.7,9.73
+"Stroud Green",Haringey,35,210,844.95,11446.2,101429.7,22.43
+"Tottenham Central",Haringey,42,177,844.95,11446.2,101429.7,15.22
+"Tottenham Hale",Haringey,75,315,844.95,11446.2,101429.7,32.68
+"West Green",Haringey,47,159,844.95,11446.2,101429.7,14.01
+"White Hart Lane",Haringey,26,98,844.95,11446.2,101429.7,9.23
+Woodside,Haringey,42,147,844.95,11446.2,101429.7,12.27
+Belmont,Harrow,4,35,716.14,7481.7,196705.2,4.27
+Canons,Harrow,15,24,716.14,7481.7,196705.2,4.27
+Centenary,Harrow,11,50,716.14,7481.7,196705.2,4.19
+Edgware,Harrow,9,56,716.14,7481.7,196705.2,4.07
+Greenhill,Harrow,48,464,716.14,7481.7,196705.2,44.79
+"Harrow Weald",Harrow,7,73,716.14,7481.7,196705.2,5.50
+"Harrow on the Hill",Harrow,11,69,716.14,7481.7,196705.2,7.41
+"Hatch End",Harrow,2,31,716.14,7481.7,196705.2,3.44
+Headstone,Harrow,3,71,716.14,7481.7,196705.2,4.91
+"Kenton East",Harrow,5,44,716.14,7481.7,196705.2,3.36
+"Kenton West",Harrow,5,16,716.14,7481.7,196705.2,2.19
+Marlborough,Harrow,8,47,716.14,7481.7,196705.2,4.83
+"North Harrow",Harrow,7,46,716.14,7481.7,196705.2,5.74
+Pinner,Harrow,7,122,716.14,7481.7,196705.2,9.73
+"Pinner South",Harrow,5,33,716.14,7481.7,196705.2,2.52
+"Rayners Lane",Harrow,4,20,716.14,7481.7,196705.2,2.49
+Roxbourne,Harrow,0,84,716.14,7481.7,196705.2,8.55
+Roxeth,Harrow,19,148,716.14,7481.7,196705.2,10.60
+Stanmore,Harrow,16,61,716.14,7481.7,196705.2,5.63
+"Wealdstone North",Harrow,1,39,716.14,7481.7,196705.2,3.86
+"Wealdstone South",Harrow,16,73,716.14,7481.7,196705.2,11.01
+"West Harrow",Harrow,2,28,716.14,7481.7,196705.2,2.86
+"Beam Park",Havering,4,58,926.49,8863.8,98182.7,11.83
+Cranham,Havering,4,20,926.49,8863.8,98182.7,1.85
+"Elm Park",Havering,8,184,926.49,8863.8,98182.7,11.68
+"Emerson Park",Havering,2,27,926.49,8863.8,98182.7,3.15
+Gooshays,Havering,6,87,926.49,8863.8,98182.7,5.35
+Hacton,Havering,0,15,926.49,8863.8,98182.7,1.65
+"Harold Wood",Havering,11,157,926.49,8863.8,98182.7,12.04
+Havering-atte-Bower,Havering,6,117,926.49,8863.8,98182.7,7.55
+Heaton,Havering,14,236,926.49,8863.8,98182.7,14.20
+"Hylands & Harrow Lodge",Havering,4,122,926.49,8863.8,98182.7,8.88
+"Marshalls & Rise Park",Havering,4,109,926.49,8863.8,98182.7,8.65
+Mawneys,Havering,5,96,926.49,8863.8,98182.7,6.95
+"Rainham & Wennington",Havering,17,67,926.49,8863.8,98182.7,6.19
+"Rush Green & Crowlands",Havering,2,61,926.49,8863.8,98182.7,3.99
+"South Hornchurch",Havering,13,36,926.49,8863.8,98182.7,4.65
+"Squirrels Heath",Havering,8,54,926.49,8863.8,98182.7,3.95
+"St Alban's",Havering,8,83,926.49,8863.8,98182.7,11.04
+"St Andrew's",Havering,31,141,926.49,8863.8,98182.7,12.07
+"St Edward's",Havering,55,543,926.49,8863.8,98182.7,56.12
+Upminster,Havering,24,155,926.49,8863.8,98182.7,13.42
+Belmore,Hillingdon,16,77,759.87,9175.9,161442.7,5.35
+Charville,Hillingdon,6,39,759.87,9175.9,161442.7,3.92
+"Colham & Cowley",Hillingdon,13,164,759.87,9175.9,161442.7,9.20
+Eastcote,Hillingdon,4,99,759.87,9175.9,161442.7,6.18
+"Harefield Village",Hillingdon,3,20,759.87,9175.9,161442.7,4.00
+"Hayes Town",Hillingdon,29,317,759.87,9175.9,161442.7,22.63
+"Heathrow Villages",Hillingdon,2,79,759.87,9175.9,161442.7,5.77
+"Hillingdon East",Hillingdon,11,81,759.87,9175.9,161442.7,5.88
+"Hillingdon West",Hillingdon,2,16,759.87,9175.9,161442.7,1.82
+"Ickenham & South Harefield",Hillingdon,3,54,759.87,9175.9,161442.7,3.68
+Northwood,Hillingdon,5,84,759.87,9175.9,161442.7,7.87
+"Northwood Hills",Hillingdon,3,48,759.87,9175.9,161442.7,4.30
+Pinkwell,Hillingdon,10,100,759.87,9175.9,161442.7,6.53
+Ruislip,Hillingdon,9,112,759.87,9175.9,161442.7,7.80
+"Ruislip Manor",Hillingdon,5,30,759.87,9175.9,161442.7,3.22
+"South Ruislip",Hillingdon,6,105,759.87,9175.9,161442.7,6.51
+Uxbridge,Hillingdon,29,423,759.87,9175.9,161442.7,24.94
+"West Drayton",Hillingdon,14,81,759.87,9175.9,161442.7,5.15
+"Wood End",Hillingdon,24,185,759.87,9175.9,161442.7,10.79
+Yeading,Hillingdon,19,179,759.87,9175.9,161442.7,14.62
+Yiewsley,Hillingdon,13,185,759.87,9175.9,161442.7,16.35
+Bedfont,Hounslow,13,120,706.91,6401.0,121179.6,8.66
+"Brentford East",Hounslow,13,53,706.91,6401.0,121179.6,7.67
+"Brentford West",Hounslow,7,127,706.91,6401.0,121179.6,15.67
+"Chiswick Gunnersbury",Hounslow,40,372,706.91,6401.0,121179.6,32.21
+"Chiswick Homefields",Hounslow,20,193,706.91,6401.0,121179.6,15.34
+"Chiswick Riverside",Hounslow,6,87,706.91,6401.0,121179.6,9.40
+Cranford,Hounslow,10,112,706.91,6401.0,121179.6,7.61
+"Feltham North",Hounslow,7,79,706.91,6401.0,121179.6,6.72
+"Feltham West",Hounslow,15,252,706.91,6401.0,121179.6,16.45
+"Hanworth Park",Hounslow,9,52,706.91,6401.0,121179.6,6.07
+"Hanworth Village",Hounslow,10,93,706.91,6401.0,121179.6,6.23
+"Heston Central",Hounslow,17,84,706.91,6401.0,121179.6,6.95
+"Heston East",Hounslow,6,93,706.91,6401.0,121179.6,8.58
+"Heston West",Hounslow,11,198,706.91,6401.0,121179.6,13.63
+"Hounslow Central",Hounslow,45,505,706.91,6401.0,121179.6,51.77
+"Hounslow East",Hounslow,6,65,706.91,6401.0,121179.6,8.09
+"Hounslow Heath",Hounslow,17,126,706.91,6401.0,121179.6,8.90
+"Hounslow South",Hounslow,5,40,706.91,6401.0,121179.6,3.24
+"Hounslow West",Hounslow,20,127,706.91,6401.0,121179.6,9.23
+Isleworth,Hounslow,4,83,706.91,6401.0,121179.6,6.19
+"Osterley & Spring Grove",Hounslow,8,134,706.91,6401.0,121179.6,9.73
+"Syon & Brentford Lock",Hounslow,7,85,706.91,6401.0,121179.6,7.57
+Arsenal,Islington,20,170,686.46,3565.1,45301.2,14.44
+Barnsbury,Islington,46,365,686.46,3565.1,45301.2,34.71
+Bunhill,Islington,102,712,686.46,3565.1,45301.2,72.93
+Caledonian,Islington,41,318,686.46,3565.1,45301.2,31.70
+Canonbury,Islington,18,133,686.46,3565.1,45301.2,12.05
+Clerkenwell,Islington,33,468,686.46,3565.1,45301.2,45.55
+"Finsbury Park",Islington,126,699,686.46,3565.1,45301.2,57.25
+Highbury,Islington,19,186,686.46,3565.1,45301.2,14.70
+Hillrise,Islington,15,90,686.46,3565.1,45301.2,7.09
+Holloway,Islington,30,178,686.46,3565.1,45301.2,16.84
+Junction,Islington,39,312,686.46,3565.1,45301.2,27.09
+Laycock,Islington,34,293,686.46,3565.1,45301.2,24.77
+Mildmay,Islington,17,154,686.46,3565.1,45301.2,12.06
+"St Mary's & St James'",Islington,30,486,686.46,3565.1,45301.2,44.20
+"St Peter's & Canalside",Islington,22,271,686.46,3565.1,45301.2,25.09
+Tollington,Islington,29,168,686.46,3565.1,45301.2,14.11
+"Tufnell Park",Islington,16,140,686.46,3565.1,45301.2,12.59
+Abingdon,"Kensington and Chelsea",8,176,585.35,4978.7,61052.3,22.54
+"Brompton & Hans Town","Kensington and Chelsea",29,748,585.35,4978.7,61052.3,95.63
+Campden,"Kensington and Chelsea",23,470,585.35,4978.7,61052.3,58.28
+"Chelsea Riverside","Kensington and Chelsea",11,76,585.35,4978.7,61052.3,11.64
+Colville,"Kensington and Chelsea",57,508,585.35,4978.7,61052.3,65.94
+Courtfield,"Kensington and Chelsea",23,289,585.35,4978.7,61052.3,37.89
+Dalgarno,"Kensington and Chelsea",13,110,585.35,4978.7,61052.3,17.56
+"Earl's Court","Kensington and Chelsea",28,249,585.35,4978.7,61052.3,30.97
+Golborne,"Kensington and Chelsea",47,191,585.35,4978.7,61052.3,26.80
+Holland,"Kensington and Chelsea",7,107,585.35,4978.7,61052.3,12.31
+Norland,"Kensington and Chelsea",11,103,585.35,4978.7,61052.3,20.88
+"Notting Dale","Kensington and Chelsea",23,164,585.35,4978.7,61052.3,19.88
+Pembridge,"Kensington and Chelsea",22,356,585.35,4978.7,61052.3,70.59
+"Queen's Gate","Kensington and Chelsea",9,244,585.35,4978.7,61052.3,33.14
+Redcliffe,"Kensington and Chelsea",8,93,585.35,4978.7,61052.3,11.00
+"Royal Hospital","Kensington and Chelsea",28,497,585.35,4978.7,61052.3,62.49
+"St. Helen's","Kensington and Chelsea",13,69,585.35,4978.7,61052.3,13.05
+Stanley,"Kensington and Chelsea",13,227,585.35,4978.7,61052.3,28.10
+Alexandra,"Kingston upon Thames",1,36,676.01,3598.9,53940.0,6.36
+Berrylands,"Kingston upon Thames",1,14,676.01,3598.9,53940.0,2.33
+"Canbury Gardens","Kingston upon Thames",3,110,676.01,3598.9,53940.0,14.23
+"Chessington South & Malden Rushett","Kingston upon Thames",1,55,676.01,3598.9,53940.0,5.71
+"Coombe Hill","Kingston upon Thames",1,58,676.01,3598.9,53940.0,7.91
+"Coombe Vale","Kingston upon Thames",3,49,676.01,3598.9,53940.0,5.04
+"Green Lane & St James","Kingston upon Thames",0,27,676.01,3598.9,53940.0,3.96
+"Hook & Chessington North","Kingston upon Thames",3,36,676.01,3598.9,53940.0,3.63
+"King George's & Sunray","Kingston upon Thames",0,30,676.01,3598.9,53940.0,5.19
+"Kingston Gate","Kingston upon Thames",5,43,676.01,3598.9,53940.0,4.37
+"Kingston Town","Kingston upon Thames",41,901,676.01,3598.9,53940.0,91.00
+"Motspur Park & Old Malden East","Kingston upon Thames",5,17,676.01,3598.9,53940.0,3.13
+"New Malden Village","Kingston upon Thames",6,137,676.01,3598.9,53940.0,14.43
+Norbiton,"Kingston upon Thames",12,93,676.01,3598.9,53940.0,9.45
+"Old Malden","Kingston upon Thames",0,36,676.01,3598.9,53940.0,5.42
+"St Mark's & Seething Wells","Kingston upon Thames",9,95,676.01,3598.9,53940.0,8.80
+"Surbiton Hill","Kingston upon Thames",5,37,676.01,3598.9,53940.0,3.88
+Tolworth,"Kingston upon Thames",4,67,676.01,3598.9,53940.0,6.41
+Tudor,"Kingston upon Thames",1,29,676.01,3598.9,53940.0,4.17
+"Brixton Acre Lane",Lambeth,64,290,658.25,3907.5,74055.0,23.19
+"Brixton North",Lambeth,42,304,658.25,3907.5,74055.0,21.34
+"Brixton Rush Common",Lambeth,20,113,658.25,3907.5,74055.0,9.10
+"Brixton Windrush",Lambeth,81,529,658.25,3907.5,74055.0,61.63
+"Clapham Common & Abbeville",Lambeth,16,89,658.25,3907.5,74055.0,10.44
+"Clapham East",Lambeth,33,195,658.25,3907.5,74055.0,22.96
+"Clapham Park",Lambeth,7,93,658.25,3907.5,74055.0,7.56
+"Clapham Town",Lambeth,83,491,658.25,3907.5,74055.0,37.02
+"Gipsy Hill",Lambeth,20,48,658.25,3907.5,74055.0,6.34
+"Herne Hill & Loughborough Junction",Lambeth,40,298,658.25,3907.5,74055.0,21.16
+Kennington,Lambeth,23,154,658.25,3907.5,74055.0,11.77
+"Knight's Hill",Lambeth,25,123,658.25,3907.5,74055.0,8.96
+"Myatt's Fields",Lambeth,12,103,658.25,3907.5,74055.0,10.38
+Oval,Lambeth,41,175,658.25,3907.5,74055.0,17.75
+"St Martin's",Lambeth,19,70,658.25,3907.5,74055.0,8.57
+"Stockwell East",Lambeth,47,245,658.25,3907.5,74055.0,28.15
+"Stockwell West & Larkhall",Lambeth,39,205,658.25,3907.5,74055.0,14.72
+"Streatham Common & Vale",Lambeth,19,93,658.25,3907.5,74055.0,6.46
+"Streatham Hill East",Lambeth,7,49,658.25,3907.5,74055.0,5.48
+"Streatham Hill West & Thornton",Lambeth,11,63,658.25,3907.5,74055.0,6.99
+"Streatham St Leonard's",Lambeth,38,222,658.25,3907.5,74055.0,16.21
+"Streatham Wells",Lambeth,7,71,658.25,3907.5,74055.0,7.90
+Vauxhall,Lambeth,106,411,658.25,3907.5,74055.0,53.64
+"Waterloo & South Bank",Lambeth,159,1342,658.25,3907.5,74055.0,169.01
+"West Dulwich",Lambeth,20,98,658.25,3907.5,74055.0,10.23
+Bellingham,Lewisham,15,148,726.64,9063.6,184467.6,13.97
+Blackheath,Lewisham,32,242,726.64,9063.6,184467.6,16.89
+Brockley,Lewisham,27,165,726.64,9063.6,184467.6,10.69
+"Catford South",Lewisham,8,122,726.64,9063.6,184467.6,7.53
+"Crofton Park",Lewisham,19,147,726.64,9063.6,184467.6,10.71
+Deptford,Lewisham,59,499,726.64,9063.6,184467.6,34.06
+Downham,Lewisham,20,124,726.64,9063.6,184467.6,7.67
+Evelyn,Lewisham,28,184,726.64,9063.6,184467.6,14.17
+"Forest Hill",Lewisham,10,115,726.64,9063.6,184467.6,8.24
+"Grove Park",Lewisham,17,65,726.64,9063.6,184467.6,5.26
+"Hither Green",Lewisham,18,147,726.64,9063.6,184467.6,8.15
+Ladywell,Lewisham,25,135,726.64,9063.6,184467.6,10.51
+"Lee Green",Lewisham,25,158,726.64,9063.6,184467.6,12.21
+"Lewisham Central",Lewisham,19,363,726.64,9063.6,184467.6,45.61
+"New Cross Gate",Lewisham,22,132,726.64,9063.6,184467.6,14.14
+"Perry Vale",Lewisham,14,83,726.64,9063.6,184467.6,5.29
+"Rushey Green",Lewisham,51,385,726.64,9063.6,184467.6,23.25
+Sydenham,Lewisham,11,129,726.64,9063.6,184467.6,8.07
+"Telegraph Hill",Lewisham,16,105,726.64,9063.6,184467.6,7.15
+Abbey,Merton,15,97,782.01,7386.9,117725.3,10.92
+"Cannon Hill",Merton,5,53,782.01,7386.9,117725.3,5.84
+"Colliers Wood",Merton,24,279,782.01,7386.9,117725.3,26.20
+"Cricket Green",Merton,27,61,782.01,7386.9,117725.3,7.26
+"Figge's Marsh",Merton,16,85,782.01,7386.9,117725.3,9.11
+Graveney,Merton,8,51,782.01,7386.9,117725.3,5.00
+Hillside,Merton,11,104,782.01,7386.9,117725.3,13.50
+"Lavender Fields",Merton,9,46,782.01,7386.9,117725.3,4.76
+Longthornton,Merton,6,53,782.01,7386.9,117725.3,4.99
+"Lower Morden",Merton,6,37,782.01,7386.9,117725.3,3.74
+"Merton Park",Merton,12,82,782.01,7386.9,117725.3,11.33
+"Pollards Hill",Merton,19,27,782.01,7386.9,117725.3,3.87
+Ravensbury,Merton,6,28,782.01,7386.9,117725.3,3.59
+"Raynes Park",Merton,14,122,782.01,7386.9,117725.3,11.11
+"St Helier",Merton,14,114,782.01,7386.9,117725.3,11.50
+Village,Merton,6,50,782.01,7386.9,117725.3,4.88
+Wandle,Merton,4,47,782.01,7386.9,117725.3,8.12
+"West Barnes",Merton,3,105,782.01,7386.9,117725.3,10.29
+"Wimbledon Park",Merton,3,86,782.01,7386.9,117725.3,8.04
+"Wimbledon Town & Dundonald",Merton,22,196,782.01,7386.9,117725.3,17.19
+Beckton,Newham,52,323,874.30,8575.9,101836.0,24.52
+Boleyn,Newham,15,112,874.30,8575.9,101836.0,8.15
+"Canning Town North",Newham,30,206,874.30,8575.9,101836.0,22.19
+"Canning Town South",Newham,21,110,874.30,8575.9,101836.0,18.54
+"Custom House",Newham,11,139,874.30,8575.9,101836.0,8.46
+"East Ham",Newham,92,665,874.30,8575.9,101836.0,50.34
+"East Ham South",Newham,22,106,874.30,8575.9,101836.0,7.09
+"Forest Gate North",Newham,8,82,874.30,8575.9,101836.0,8.33
+"Forest Gate South",Newham,34,189,874.30,8575.9,101836.0,12.83
+"Green Street East",Newham,11,174,874.30,8575.9,101836.0,11.02
+"Green Street West",Newham,25,289,874.30,8575.9,101836.0,19.76
+"Little Ilford",Newham,19,102,874.30,8575.9,101836.0,6.69
+"Manor Park",Newham,22,127,874.30,8575.9,101836.0,9.45
+Maryland,Newham,20,136,874.30,8575.9,101836.0,12.24
+"Plaistow North",Newham,31,144,874.30,8575.9,101836.0,9.90
+"Plaistow South",Newham,19,129,874.30,8575.9,101836.0,11.02
+"Plaistow West & Canning Town East",Newham,24,142,874.30,8575.9,101836.0,9.83
+Plashet,Newham,28,70,874.30,8575.9,101836.0,8.44
+"Royal Albert",Newham,14,122,874.30,8575.9,101836.0,13.39
+"Royal Victoria",Newham,12,195,874.30,8575.9,101836.0,14.23
+Stratford,Newham,107,644,874.30,8575.9,101836.0,47.70
+"Stratford Olympic Park",Newham,100,1140,874.30,8575.9,101836.0,104.61
+"Wall End",Newham,30,93,874.30,8575.9,101836.0,7.41
+"West Ham",Newham,27,108,874.30,8575.9,101836.0,8.60
+Aldborough,Redbridge,11,127,828.39,10763.4,154379.2,8.86
+Barkingside,Redbridge,9,71,828.39,10763.4,154379.2,5.26
+Bridge,Redbridge,11,61,828.39,10763.4,154379.2,5.37
+Chadwell,Redbridge,17,50,828.39,10763.4,154379.2,4.03
+Churchfields,Redbridge,3,59,828.39,10763.4,154379.2,3.96
+Clayhall,Redbridge,11,58,828.39,10763.4,154379.2,5.00
+Clementswood,Redbridge,27,112,828.39,10763.4,154379.2,10.09
+Cranbrook,Redbridge,11,106,828.39,10763.4,154379.2,8.84
+Fairlop,Redbridge,19,98,828.39,10763.4,154379.2,7.93
+Fullwell,Redbridge,16,107,828.39,10763.4,154379.2,7.70
+Goodmayes,Redbridge,39,164,828.39,10763.4,154379.2,13.39
+Hainault,Redbridge,2,67,828.39,10763.4,154379.2,4.39
+"Ilford Town",Redbridge,70,785,828.39,10763.4,154379.2,70.56
+Loxford,Redbridge,29,131,828.39,10763.4,154379.2,10.63
+Mayfield,Redbridge,12,58,828.39,10763.4,154379.2,4.38
+Monkhams,Redbridge,3,39,828.39,10763.4,154379.2,4.40
+Newbury,Redbridge,15,67,828.39,10763.4,154379.2,5.72
+"Seven Kings",Redbridge,25,108,828.39,10763.4,154379.2,8.77
+"South Woodford",Redbridge,14,138,828.39,10763.4,154379.2,12.16
+Valentines,Redbridge,47,93,828.39,10763.4,154379.2,9.00
+"Wanstead Park",Redbridge,14,32,828.39,10763.4,154379.2,5.64
+"Wanstead Village",Redbridge,14,85,828.39,10763.4,154379.2,7.60
+Barnes,"Richmond upon Thames",10,83,635.70,3370.7,57706.7,8.88
+"East Sheen","Richmond upon Thames",6,73,635.70,3370.7,57706.7,7.41
+"Fulwell & Hampton Hill","Richmond upon Thames",4,97,635.70,3370.7,57706.7,9.43
+"Ham, Petersham & Richmond Riverside","Richmond upon Thames",5,39,635.70,3370.7,57706.7,4.06
+Hampton,"Richmond upon Thames",4,52,635.70,3370.7,57706.7,5.61
+"Hampton North","Richmond upon Thames",4,43,635.70,3370.7,57706.7,4.68
+"Hampton Wick & South Teddington","Richmond upon Thames",2,47,635.70,3370.7,57706.7,4.56
+Heathfield,"Richmond upon Thames",5,42,635.70,3370.7,57706.7,4.51
+Kew,"Richmond upon Thames",5,109,635.70,3370.7,57706.7,9.67
+"Mortlake & Barnes Common","Richmond upon Thames",13,71,635.70,3370.7,57706.7,7.12
+"North Richmond","Richmond upon Thames",6,61,635.70,3370.7,57706.7,6.17
+"South Richmond","Richmond upon Thames",28,343,635.70,3370.7,57706.7,33.47
+"South Twickenham","Richmond upon Thames",6,58,635.70,3370.7,57706.7,5.90
+"St Margarets & North Twickenham","Richmond upon Thames",8,73,635.70,3370.7,57706.7,6.95
+Teddington,"Richmond upon Thames",4,115,635.70,3370.7,57706.7,11.26
+"Twickenham Riverside","Richmond upon Thames",16,109,635.70,3370.7,57706.7,11.08
+"West Twickenham","Richmond upon Thames",2,49,635.70,3370.7,57706.7,4.60
+Whitton,"Richmond upon Thames",15,147,635.70,3370.7,57706.7,15.52
+"Borough & Bankside",Southwark,106,1437,600.00,3142.7,58196.0,165.36
+"Camberwell Green",Southwark,49,261,600.00,3142.7,58196.0,20.34
+"Champion Hill",Southwark,17,63,600.00,3142.7,58196.0,8.47
+Chaucer,Southwark,65,416,600.00,3142.7,58196.0,32.03
+"Dulwich Hill",Southwark,7,40,600.00,3142.7,58196.0,4.84
+"Dulwich Village",Southwark,19,71,600.00,3142.7,58196.0,8.92
+"Dulwich Wood",Southwark,13,54,600.00,3142.7,58196.0,6.51
+Faraday,Southwark,44,168,600.00,3142.7,58196.0,16.99
+"Goose Green",Southwark,24,156,600.00,3142.7,58196.0,13.11
+"London Bridge & West Bermondsey",Southwark,125,1300,600.00,3142.7,58196.0,95.73
+Newington,Southwark,20,117,600.00,3142.7,58196.0,9.90
+"North Bermondsey",Southwark,47,333,600.00,3142.7,58196.0,24.51
+"North Walworth",Southwark,89,548,600.00,3142.7,58196.0,40.71
+"Nunhead & Queen's Road",Southwark,17,151,600.00,3142.7,58196.0,10.77
+"Old Kent Road",Southwark,41,318,600.00,3142.7,58196.0,19.30
+Peckham,Southwark,31,145,600.00,3142.7,58196.0,11.93
+"Peckham Rye",Southwark,3,49,600.00,3142.7,58196.0,5.11
+Rotherhithe,Southwark,54,419,600.00,3142.7,58196.0,30.72
+"Rye Lane",Southwark,37,319,600.00,3142.7,58196.0,24.95
+"South Bermondsey",Southwark,48,214,600.00,3142.7,58196.0,16.45
+"St George's",Southwark,61,371,600.00,3142.7,58196.0,53.03
+"St Giles",Southwark,21,175,600.00,3142.7,58196.0,11.93
+"Surrey Docks",Southwark,28,232,600.00,3142.7,58196.0,19.79
+Beddington,Sutton,10,43,634.10,3571.7,82846.5,4.82
+Belmont,Sutton,0,19,634.10,3571.7,82846.5,1.65
+"Carshalton Central",Sutton,15,59,634.10,3571.7,82846.5,6.34
+"Carshalton South & Clockhouse",Sutton,1,30,634.10,3571.7,82846.5,3.07
+Cheam,Sutton,6,47,634.10,3571.7,82846.5,4.90
+Hackbridge,Sutton,10,40,634.10,3571.7,82846.5,7.33
+"North Cheam",Sutton,3,47,634.10,3571.7,82846.5,4.29
+"South Beddington & Roundshaw",Sutton,11,69,634.10,3571.7,82846.5,7.41
+"St Helier East",Sutton,10,28,634.10,3571.7,82846.5,4.50
+"St Helier West",Sutton,10,56,634.10,3571.7,82846.5,5.37
+Stonecot,Sutton,8,55,634.10,3571.7,82846.5,8.09
+"Sutton Central",Sutton,26,360,634.10,3571.7,82846.5,31.21
+"Sutton North",Sutton,5,40,634.10,3571.7,82846.5,3.98
+"Sutton South",Sutton,3,35,634.10,3571.7,82846.5,3.12
+"Sutton West & East Cheam",Sutton,6,33,634.10,3571.7,82846.5,3.39
+"The Wrythe",Sutton,9,137,634.10,3571.7,82846.5,13.64
+"Wallington North",Sutton,10,60,634.10,3571.7,82846.5,5.85
+"Wallington South",Sutton,12,105,634.10,3571.7,82846.5,10.44
+"Worcester Park North",Sutton,2,41,634.10,3571.7,82846.5,5.18
+"Worcester Park South",Sutton,2,17,634.10,3571.7,82846.5,2.65
+"Bethnal Green","Tower Hamlets",47,321,594.11,3515.7,56828.4,17.33
+"Blackwall & Cubitt Town","Tower Hamlets",20,191,594.11,3515.7,56828.4,9.66
+"Bow East","Tower Hamlets",19,229,594.11,3515.7,56828.4,12.70
+"Bow West","Tower Hamlets",34,234,594.11,3515.7,56828.4,19.55
+"Bromley North","Tower Hamlets",17,134,594.11,3515.7,56828.4,13.21
+"Bromley South","Tower Hamlets",9,66,594.11,3515.7,56828.4,5.27
+"Canary Wharf","Tower Hamlets",41,517,594.11,3515.7,56828.4,31.14
+"Island Gardens","Tower Hamlets",8,57,594.11,3515.7,56828.4,4.36
+Lansbury,"Tower Hamlets",39,121,594.11,3515.7,56828.4,7.36
+Limehouse,"Tower Hamlets",8,37,594.11,3515.7,56828.4,6.67
+"Mile End","Tower Hamlets",35,225,594.11,3515.7,56828.4,11.93
+Poplar,"Tower Hamlets",22,65,594.11,3515.7,56828.4,10.94
+Shadwell,"Tower Hamlets",23,181,594.11,3515.7,56828.4,15.72
+"Spitalfields & Banglatown","Tower Hamlets",73,855,594.11,3515.7,56828.4,70.20
+"St Dunstan's","Tower Hamlets",23,101,594.11,3515.7,56828.4,8.63
+"St Katharine's & Wapping","Tower Hamlets",8,291,594.11,3515.7,56828.4,24.78
+"St Peter's","Tower Hamlets",62,439,594.11,3515.7,56828.4,25.09
+"Stepney Green","Tower Hamlets",23,86,594.11,3515.7,56828.4,8.75
+Weavers,"Tower Hamlets",53,423,594.11,3515.7,56828.4,35.88
+Whitechapel,"Tower Hamlets",58,497,594.11,3515.7,56828.4,29.24
+"Cann Hall","Waltham Forest",16,88,770.15,6597.6,115480.1,6.47
+Cathall,"Waltham Forest",16,79,770.15,6597.6,115480.1,9.02
+"Chapel End","Waltham Forest",8,110,770.15,6597.6,115480.1,8.39
+"Chingford Green","Waltham Forest",12,54,770.15,6597.6,115480.1,5.71
+Endlebury,"Waltham Forest",4,34,770.15,6597.6,115480.1,4.25
+Forest,"Waltham Forest",12,99,770.15,6597.6,115480.1,6.71
+"Grove Green","Waltham Forest",14,117,770.15,6597.6,115480.1,8.84
+"Hale End & Highams Park South","Waltham Forest",3,45,770.15,6597.6,115480.1,5.09
+"Hatch Lane & Highams Park North","Waltham Forest",3,54,770.15,6597.6,115480.1,4.32
+"High Street","Waltham Forest",42,444,770.15,6597.6,115480.1,45.08
+"Higham Hill","Waltham Forest",18,123,770.15,6597.6,115480.1,9.98
+"Hoe Street","Waltham Forest",16,96,770.15,6597.6,115480.1,7.87
+Larkswood,"Waltham Forest",8,52,770.15,6597.6,115480.1,4.48
+"Lea Bridge","Waltham Forest",27,222,770.15,6597.6,115480.1,16.48
+Leyton,"Waltham Forest",27,241,770.15,6597.6,115480.1,19.44
+Leytonstone,"Waltham Forest",33,170,770.15,6597.6,115480.1,16.44
+Markhouse,"Waltham Forest",6,68,770.15,6597.6,115480.1,7.31
+"St James","Waltham Forest",31,184,770.15,6597.6,115480.1,17.19
+"Upper Walthamstow","Waltham Forest",1,9,770.15,6597.6,115480.1,1.19
+Valley,"Waltham Forest",23,312,770.15,6597.6,115480.1,23.41
+"William Morris","Waltham Forest",10,84,770.15,6597.6,115480.1,6.41
+"Wood Street","Waltham Forest",8,73,770.15,6597.6,115480.1,8.54
+Balham,Wandsworth,29,328,732.43,6586.7,85191.8,20.43
+"Battersea Park",Wandsworth,41,205,732.43,6586.7,85191.8,12.98
+"East Putney",Wandsworth,13,103,732.43,6586.7,85191.8,6.76
+Falconbrook,Wandsworth,19,133,732.43,6586.7,85191.8,12.61
+Furzedown,Wandsworth,32,92,732.43,6586.7,85191.8,6.99
+Lavender,Wandsworth,42,397,732.43,6586.7,85191.8,34.91
+"Nine Elms",Wandsworth,16,185,732.43,6586.7,85191.8,36.77
+Northcote,Wandsworth,13,55,732.43,6586.7,85191.8,5.10
+Roehampton,Wandsworth,14,151,732.43,6586.7,85191.8,8.62
+"Shaftesbury & Queenstown",Wandsworth,19,137,732.43,6586.7,85191.8,9.89
+"South Balham",Wandsworth,10,95,732.43,6586.7,85191.8,10.38
+Southfields,Wandsworth,7,70,732.43,6586.7,85191.8,6.14
+"St Mary's",Wandsworth,18,139,732.43,6586.7,85191.8,10.98
+Thamesfield,Wandsworth,31,253,732.43,6586.7,85191.8,17.40
+"Tooting Bec",Wandsworth,14,100,732.43,6586.7,85191.8,6.71
+"Tooting Broadway",Wandsworth,53,501,732.43,6586.7,85191.8,32.00
+Trinity,Wandsworth,4,70,732.43,6586.7,85191.8,6.79
+Wandle,Wandsworth,4,63,732.43,6586.7,85191.8,6.15
+"Wandsworth Common",Wandsworth,12,85,732.43,6586.7,85191.8,5.84
+"Wandsworth Town",Wandsworth,32,254,732.43,6586.7,85191.8,15.83
+"West Hill",Wandsworth,6,35,732.43,6586.7,85191.8,2.44
+"West Putney",Wandsworth,3,76,732.43,6586.7,85191.8,4.66
+"Abbey Road",Westminster,25,93,567.78,3448.8,41417.0,9.09
+Bayswater,Westminster,40,269,567.78,3448.8,41417.0,25.43
+"Church Street",Westminster,25,228,567.78,3448.8,41417.0,21.69
+"Harrow Road",Westminster,31,110,567.78,3448.8,41417.0,12.62
+"Hyde Park",Westminster,117,877,567.78,3448.8,41417.0,98.30
+"Knightsbridge & Belgravia",Westminster,32,572,567.78,3448.8,41417.0,53.97
+"Lancaster Gate",Westminster,55,544,567.78,3448.8,41417.0,53.15
+"Little Venice",Westminster,16,129,567.78,3448.8,41417.0,13.98
+"Maida Vale",Westminster,52,117,567.78,3448.8,41417.0,14.45
+Marylebone,Westminster,81,1144,567.78,3448.8,41417.0,98.62
+"Pimlico North",Westminster,38,414,567.78,3448.8,41417.0,44.01
+"Pimlico South",Westminster,6,63,567.78,3448.8,41417.0,6.53
+"Queen's Park",Westminster,8,89,567.78,3448.8,41417.0,7.61
+"Regent's Park",Westminster,74,558,567.78,3448.8,41417.0,53.52
+"St James's",Westminster,543,7544,567.78,3448.8,41417.0,802.60
+"Vincent Square",Westminster,28,357,567.78,3448.8,41417.0,36.30
+"West End",Westminster,930,11647,567.78,3448.8,41417.0,1118.35
+Westbourne,Westminster,31,145,567.78,3448.8,41417.0,14.84

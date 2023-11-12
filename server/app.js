@@ -6,12 +6,15 @@
 var express = require('express');
 var app = express();
 
-const { getInformation } = require('./databases/DatabaseAPI');
+// Import modules
+const { CrimeData } = require('./databases/DatabaseAPI');
+app.get('/crime-data', CrimeData );
 
-app.get('/getInformation', getInformation);
+//Static file serving
+app.use(express.static('../website'));
 
 // Setup the server and print a string to the screen when server is ready
-var portNumber = 8847;
+var portNumber = 8848;
 
 var server = app.listen(portNumber, function () {
     var port = server.address().port;
