@@ -286,13 +286,27 @@
         var points = [{ "lnglat": ["0.00812", "51.321565"], 'extData': { 'id': 'DDD' } }, { "lnglat": ["0.01712", "52.331565"], 'extData': { 'id': 'DDD' } },
         ];
 
+        // mock = env === 'dev'
+        let mock = true;
+        function randomNum(minNum, maxNum) {
+            switch (arguments.length) {
+                case 1:
+                    return parseInt(Math.random() * minNum + 1, 10);
+                    break;
+                case 2:
+                    return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                    break;
+                default:
+                    return 0;
+                    break;
+            }
+        }
+
         let map;
         let featureLayer;
         let infoWindow;
         let lastInteractedFeatureIds = [];
         let lastClickedFeatureIds = [];
-        // Define styles.
-        // Stroke and fill with minimum opacity value.
         const styleDefault = {
             strokeColor: '#810FCB',
             strokeOpacity: 1.0,
@@ -333,16 +347,53 @@
             lastInteractedFeatureIds = e.features.map(f => f.placeId);
             featureLayer.style = applyStyle;
         }
+        function createCrimeDataContent(data) {
+            return `<b>Ward:</b> ${data.WardName}<br>` +
+                `<b>Borough:</b> ${data.LookUp_BoroughName}<br>` +
+                `<b>Total Robbery Cases:</b> ${data.TotalRobberyCases}<br>` +
+                `<b>Total Theft Cases:</b> ${data.TotalTheftCases}<br>` +
+                `<b>Total Cases:</b> ${data.TotalCases}<br>` +
+                `<b>Avg Response Time I:</b> ${data.AvgResponseI}<br>` +
+                `<b>Avg Response Time S:</b> ${data.AvgResponseS}<br>` +
+                `<b>Avg Response Time E:</b> ${data.AvgResponseE}<br>` +
+                `<b>Crimes Per Thousand:</b> ${data.CrimesPerThousand}`;
+        }
         async function createInfoWindow(event) {
             let feature = event.features[0];
             if (!feature.placeId) return;
             const place = await feature.fetchPlace();
-            let content =
-                '<span style="font-size:small">Display name: ' + place.displayName +
-                '<br/> Place ID: ' + feature.placeId +
-                '<br/> Feature type: ' + feature.featureType + '</span>';
-
+            let content = '<span style="font-size:small">Display name: ' + place.displayName + '<br>';
             updateInfoWindow(content, event.latLng);
+
+            let randomData = {
+                WardName: place.displayName,
+                LookUp_BoroughName: place.displayName,
+                TotalRobberyCases: randomNum(1, 99),
+                TotalTheftCases: randomNum(1, 99),
+                AvgResponseI: `${randomNum(1, 10)}ms`,
+                AvgResponseS: `${randomNum(1, 10)}ms`,
+                AvgResponseE: `${randomNum(1, 10)}ms`,
+                CrimesPerThousand: randomNum(0, 99),
+            };
+            randomData.TotalCases = randomData.TotalRobberyCases + randomData.TotalTheftCases;
+
+            //TODO: change wardName and boroughName
+            const wardName = place.displayName
+            const boroughName = place.displayName
+            const apiUrl = `http://127.0.0.1:8848/crime-data?wardName=${wardName}&boroughName=${boroughName}`;
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    content += createCrimeDataContent(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error)
+                    if (mock) {
+                        content += `mock data: <br>` + createCrimeDataContent(randomData);
+                    }
+                }).finally(() => {
+                    updateInfoWindow(content, event.latLng);
+                })
         }
         function updateInfoWindow(content, center) {
             infoWindow.setContent(content);
