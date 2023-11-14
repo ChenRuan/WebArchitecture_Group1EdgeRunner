@@ -286,8 +286,9 @@
         var points = [{ "lnglat": ["0.00812", "51.321565"], 'extData': { 'id': 'DDD' } }, { "lnglat": ["0.01712", "52.331565"], 'extData': { 'id': 'DDD' } },
         ];
 
-        let map
-        let featureLayer
+        let map;
+        let featureLayer;
+        let infoWindow;
         let lastInteractedFeatureIds = [];
         let lastClickedFeatureIds = [];
         // Define styles.
@@ -332,7 +333,25 @@
             lastInteractedFeatureIds = e.features.map(f => f.placeId);
             featureLayer.style = applyStyle;
         }
+        async function createInfoWindow(event) {
+            let feature = event.features[0];
+            if (!feature.placeId) return;
+            const place = await feature.fetchPlace();
+            let content =
+                '<span style="font-size:small">Display name: ' + place.displayName +
+                '<br/> Place ID: ' + feature.placeId +
+                '<br/> Feature type: ' + feature.featureType + '</span>';
 
+            updateInfoWindow(content, event.latLng);
+        }
+        function updateInfoWindow(content, center) {
+            infoWindow.setContent(content);
+            infoWindow.setPosition(center);
+            infoWindow.open({
+                map,
+                shouldFocus: false,
+            });
+        }
         function initMap() {
             map = new google.maps.Map(document.getElementById("container"),
                 {
@@ -343,6 +362,7 @@
                     streetViewControl: false
                 }
             )
+            // ADMINISTRATIVE_AREA_LEVEL_2 || LOCALITY
             featureLayer = map.getFeatureLayer('LOCALITY');
             featureLayer.addListener('click', handleClick);
             featureLayer.addListener('mousemove', handleMouseMove);
@@ -360,7 +380,7 @@
             ]
             console.log(icons[0])
 
-            var infowindow = new google.maps.InfoWindow({
+            infoWindow = new google.maps.InfoWindow({
                 content: '<div style="border:1px solid #dbdbdb;padding:20px;width:260px;background:#ffff"><p style="margin:0;font-size:16px;">E20 1EJ</p><p style="margin:2px 0;font-weight:bold;">Response speed</p><p style="display:flex;justify-content:space-between;margin:2px 0">Robbery <span>60</span></p><p style="display:flex;margin:2px 0;justify-content:space-between">Theft <span>105</span></p></div>',
                 maxWidth: 200
             });
