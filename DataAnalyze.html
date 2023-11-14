@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Analyze</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    #scatter_chart {
+      top: 50%;
+      left: 50%;
+    }
+    .centered-text {
+      text-align: center;
+      font-size: 15px;
+      width: 90%;
+      margin: 0 auto;
+    }
+  </style>
+  <!-- import Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Data Analysis</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Back to map</a>
+      </li>
+    </ul>
+  </nav>
+  <p><a href="http://casa0017.cetools.org:8848/"></a></p>
+  <div id="scatter_chart" ></div>
+  <div class="centered-text">
+    123123 test 555
+  </div>
+  <script>
+    // Get data from backend
+    fetch('http://casa0017.cetools.org:8848/analyze') 
+      .then(response => response.json())
+      .then(data => {
+        const xData = data.map(entry => entry.AvgResponseI); // Use AvgResponseI as the horizontal axis
+        const yData = data.map(entry => entry.CrimesPerThousand); // Use CrimesPerThousand as the vertical axis
+        const wardNames = data.map(entry => entry.TotalName) ;
+        // Create the layout of the scatter plot
+        const layout = {
+          title: 'Connection between Average Response Time and Case Rate',
+          xaxis: { title: 'Average Response Time (Second)' }, // Horizontal topic name
+          yaxis: { title: 'Number of cases per 1000 people' ,// Vertical topic name
+                  range: [0, 250]}, 
+          hovermode: 'closest', // set hover mode as closest
+          width: 1000,
+          height: 1200,
+        };
+
+        // Create the scatter plot
+        const scatterChart = document.getElementById('scatter_chart');
+        const trace = {
+          x: xData,
+          y: yData,
+          text: wardNames, // Set the hover text as WardName
+          mode: 'markers',
+          type: 'scatter',
+        };
+        
+        Plotly.newPlot(scatterChart, [trace], layout);
+        updateWidthHeight();
+
+        window.addEventListener('resize', () => {
+        // Change Height and Width of Chart depending on windows
+        updateWidthHeight();
+      });
+
+        function updateWidthHeight() {
+          // Get width and height of window
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+
+          // Determine horizontal or vertical screen status
+          const isLandscape = windowWidth > windowHeight;
+
+          if (isLandscape) {
+            ChangeWidth = windowWidth-30;
+            ChangeHeight = windowWidth*0.4;
+          } else {
+            ChangeWidth = windowWidth-30;
+            ChangeHeight = windowWidth*1.2;
+          }
+
+          // use Plotly.relayout to rewrite the chart
+          Plotly.relayout(scatterChart, {
+            'width': ChangeWidth,
+            'height' : ChangeHeight
+          });
+        }
+      })
+      .catch(error => {
+        console.error('fetch error', error);
+      });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+</body>
+</html>

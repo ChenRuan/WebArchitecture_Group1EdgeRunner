@@ -8,9 +8,9 @@ var mysql = require('mysql');
 // MySQL Connection Variables
 var connection = mysql.createConnection({
     host        : 'casa0017.cetools.org', 
-    user        : 'Hidden content',
-    password    : 'Hidden content',
-    database    : 'Hidden content'
+    user        : 'HIDDEN CONTENT',
+    password    : 'HIDDEN CONTENT',
+    database    : 'HIDDEN CONTENT'
 });
 
 connection.connect((err) => {
@@ -54,13 +54,78 @@ function CrimeData(req, res){
             return res.status(500).send('Server error');
         }
         if (results.length === 0) {
-            return res.status(404).send('Data not found');
+            res.json(
+                {
+                    "TotalName" : "Not Available",
+                    "BoroughName" : "Not Available",
+                    "TotalRobberyCases" : "Not Available",
+                    "TotalTheftCases" : "Not Available",
+                    "TotalCases" : "Not Available",
+                    "AvgResponseI" : "Not Available",
+                    "AvgResponseS" : "Not Available",
+                    "AvgResponseE" : "Not Available",
+                    "CrimesPerThousand" : "Not Available",
+                }
+            )
         }
         res.json(results[0]);
     });
 };
 
-module.exports = { CrimeData };
+function MapData(req, res){
+    // SQL query
+    const query = `
+        SELECT 
+            WardName,
+            BoroughName,
+            ( TotalRobberyCases + TotalTheftCases ) AS TotalCases
+        FROM 
+            Group_Crime_Response
+    `;
+
+    // Execute the query
+    connection.query(query, (error, results) => {
+        if (error) {
+            return res.status(500).send('Server error');
+        }
+        if (results.length === 0) {
+            res.json(
+                {
+                    "TotalName" : "Not Available",
+                    "BoroughName" : "Not Available",
+                    "TotalCases" : "Not Available"
+                }
+            )
+        }
+        res.json(results);
+    });
+};
+
+function DataAnalyze(req, res){
+    // SQL query
+    const query = `
+        SELECT 
+            CONCAT(WardName, ' - ', BoroughName) as TotalName,         
+            AvgResponseI,
+            CrimesPerThousand
+        FROM 
+            Group_Crime_Response
+    `;
+
+    // Execute the query
+    connection.query(query, (error, results) => {
+        if (error) {
+            return res.status(500).send('Server error');
+        }
+        if (results.length === 0) {
+            return res.status(404).send('Data not found');
+        }
+        res.json(results);
+    });
+};
+
+
+module.exports = { CrimeData, DataAnalyze, MapData };
 
 
 

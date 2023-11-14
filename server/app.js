@@ -6,9 +6,18 @@
 var express = require('express');
 var app = express();
 
+// import cors module
+const cors = require('cors');
+app.use(cors());
+
 // Import modules
-const { CrimeData } = require('./databases/DatabaseAPI');
+const { CrimeData, DataAnalyze, MapData } = require('./databases/DatabaseAPI');
+// Click event
 app.get('/crime-data', CrimeData );
+// Data Analyze Page
+app.get('/analyze', DataAnalyze );
+// Map initial 
+app.get('/map-data', MapData );
 
 //Static file serving
 app.use(express.static('../website'));
