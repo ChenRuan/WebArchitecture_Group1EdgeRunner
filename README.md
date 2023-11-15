@@ -1,4 +1,4 @@
-# WebArchitecture_Group1EdgeRunner
+# EdgeRunner_GroupReport
 # Introduction
 
 In this project, we delve into the realm of connected environments by developing an interactive platform that integrates and visualizes crime data in London. Our focus is on creating a dynamic interface where users can explore the intricate relationship between crime rates, emergency response times, and demographic data across different wards of the city. This initiative is rooted in the concept of a connected environment, where data from diverse sources is amalgamated to offer a comprehensive view of urban safety dynamics.
