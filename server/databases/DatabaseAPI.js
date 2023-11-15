@@ -8,9 +8,9 @@ var mysql = require('mysql');
 // MySQL Connection Variables
 var connection = mysql.createConnection({
     host        : 'casa0017.cetools.org', 
-    user        : 'HIDDEN CONTENT',
-    password    : 'HIDDEN CONTENT',
-    database    : 'HIDDEN CONTENT'
+    user        : 'hidden',
+    password    : 'hidden',
+    database    : 'hidden'
 });
 
 connection.connect((err) => {
@@ -56,8 +56,8 @@ function CrimeData(req, res){
         if (results.length === 0) {
             res.json(
                 {
-                    "TotalName" : "Not Available",
-                    "BoroughName" : "Not Available",
+                    "TotalName" : wardName,
+                    "BoroughName" : boroughName,
                     "TotalRobberyCases" : "Not Available",
                     "TotalTheftCases" : "Not Available",
                     "TotalCases" : "Not Available",
@@ -68,7 +68,10 @@ function CrimeData(req, res){
                 }
             )
         }
-        res.json(results[0]);
+        else{
+            res.json(results);
+        }
+
     });
 };
 
