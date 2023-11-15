@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>伦敦Wards地图 - 谷歌地图版</title>
+    <style>
+        html,
+        body,
+        #map {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        #menu {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            right: 20px;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            transition: all .2s ease;
+        }
+
+        #menu .menu-ico {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        #menu input {
+            height: 40px;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px 0 0 5px;
+            padding: 8px 10px;
+            box-sizing: border-box;
+            width: 200px;
+            outline: 0;
+            border-right: 0;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .search .bt {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-left: 0px;
+            width: 70px;
+            padding-right: 10px;
+            height: 40px;
+            border-radius: 0 5px 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .search .bt svg {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #sidebar {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 240px;
+            background-color: rgb(74, 81, 87);
+            transition: all .2s ease;
+            color: #fff;
+            z-index: 999;
+
+        }
+
+        #sidebar h2 {
+            padding: 20px;
+            margin: 0;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        #sidebar h2 svg {
+            margin-right: 10px;
+        }
+
+        .hide {
+            left: -240px;
+        }
+
+        .show {
+            left: 0;
+        }
+
+        .hideSide {
+            padding-left: 0;
+        }
+
+        .showSide {
+            padding-left: 240px;
+        }
+
+        #sidebar .item {
+            padding: 0 20px 20px 20px;
+        }
+
+        #sidebar .item .tit {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        #sidebar .item .tit svg {
+            margin-right: 10px;
+        }
+
+        #sidebar .item .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            margin-top: 10px;
+        }
+
+        #sidebar .item .row select {
+            width: 80px;
+            height: 28px;
+            outline: 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+        }
+
+        #sidebar .bot {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #sidebar .bot:hover {
+            color: #1d9ed7;
+        }
+
+        #sidebar .bot svg {
+            margin-right: 10px;
+        }
+
+        .amap-marker-label {
+            border: 0;
+            background: none;
+        }
+
+        .amap-info-content {
+            padding: 0;
+        }
+
+        .bottom-center .amap-info-sharp,
+        .bottom-center .amap-info-sharp:after {
+            display: none;
+        }
+
+        .amap-info-close {
+            display: none;
+        }
+
+        .gm-style-mtc {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div id="map" class="map" tabindex="0"></div>
+        <div id="sidebar" class="hide">
+            <h2><svg t="1699712739023" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="7041" width="16" height="16">
+                    <path
+                        d="M500.8 512.7c66.6 0 120.5-54 120.5-120.5 0-66.6-54-120.5-120.5-120.5s-120.5 54-120.5 120.5c-0.1 66.5 53.9 120.5 120.5 120.5z m0 447.7c-65.3 0-344.4-360.8-344.4-551S310.6 65 500.8 65s344.4 154.2 344.4 344.4-279.1 551-344.4 551z"
+                        p-id="7042" fill="#ffffff"></path>
+                </svg>Security Map</h2>
+            <!-- <div class="item">
+                <div class="tit"><svg t="1699712873627" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="8166" width="16" height="16">
+                        <path
+                            d="M554.666667 618.666667v85.333333l-42.666667-25.6v-187.733333L341.333333 298.666667h384l-170.666666 187.733333v132.266667z m85.333333-89.6L938.666667 213.333333H128l298.666667 315.733334V725.333333l213.333333 128v-324.266666z"
+                            fill="#ffffff" p-id="8167"></path>
+                    </svg> Filter</div>
+                <div class="row">
+                    Time interval
+                    <select>
+                        <option>1 month</option>
+                        <option>three months</option>
+                        <option>1 year</option>
+                    </select>
+                </div>
+                <div class="row">
+                    Crime Types
+                    <select>
+                        <option>all</option>
+                        <option>theft</option>
+                        <option>robbery</option>
+                    </select>
+                </div>
+            </div> -->
+            <a href="javascript:;" onclick="goDataAnalysis()" class="bot"><svg t="1699713850233" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="9237" width="16" height="16">
+                    <path
+                        d="M512 328c-100.8 0-184 83.2-184 184S411.2 696 512 696 696 612.8 696 512 612.8 328 512 328z m0 320c-75.2 0-136-60.8-136-136s60.8-136 136-136 136 60.8 136 136-60.8 136-136 136z"
+                        p-id="9238" fill="#ffffff"></path>
+                    <path
+                        d="M857.6 572.8c-20.8-12.8-33.6-35.2-33.6-60.8s12.8-46.4 33.6-60.8c14.4-9.6 20.8-27.2 16-44.8-8-27.2-19.2-52.8-32-76.8-8-14.4-25.6-24-43.2-19.2-24 4.8-48-1.6-65.6-19.2-17.6-17.6-24-41.6-19.2-65.6 3.2-16-4.8-33.6-19.2-43.2-24-14.4-51.2-24-76.8-32-16-4.8-35.2 1.6-44.8 16-12.8 20.8-35.2 33.6-60.8 33.6s-46.4-12.8-60.8-33.6c-9.6-14.4-27.2-20.8-44.8-16-27.2 8-52.8 19.2-76.8 32-14.4 8-24 25.6-19.2 43.2 4.8 24-1.6 49.6-19.2 65.6-17.6 17.6-41.6 24-65.6 19.2-16-3.2-33.6 4.8-43.2 19.2-14.4 24-24 51.2-32 76.8-4.8 16 1.6 35.2 16 44.8 20.8 12.8 33.6 35.2 33.6 60.8s-12.8 46.4-33.6 60.8c-14.4 9.6-20.8 27.2-16 44.8 8 27.2 19.2 52.8 32 76.8 8 14.4 25.6 22.4 43.2 19.2 24-4.8 49.6 1.6 65.6 19.2 17.6 17.6 24 41.6 19.2 65.6-3.2 16 4.8 33.6 19.2 43.2 24 14.4 51.2 24 76.8 32 16 4.8 35.2-1.6 44.8-16 12.8-20.8 35.2-33.6 60.8-33.6s46.4 12.8 60.8 33.6c8 11.2 20.8 17.6 33.6 17.6 3.2 0 8 0 11.2-1.6 27.2-8 52.8-19.2 76.8-32 14.4-8 24-25.6 19.2-43.2-4.8-24 1.6-49.6 19.2-65.6 17.6-17.6 41.6-24 65.6-19.2 16 3.2 33.6-4.8 43.2-19.2 14.4-24 24-51.2 32-76.8 4.8-17.6-1.6-35.2-16-44.8z m-56 92.8c-38.4-6.4-76.8 6.4-104 33.6-27.2 27.2-40 65.6-33.6 104-17.6 9.6-36.8 17.6-56 24-22.4-30.4-57.6-49.6-97.6-49.6-38.4 0-73.6 17.6-97.6 49.6-19.2-6.4-38.4-14.4-56-24 6.4-38.4-6.4-76.8-33.6-104-27.2-27.2-65.6-40-104-33.6-9.6-17.6-17.6-36.8-24-56 30.4-22.4 49.6-57.6 49.6-97.6 0-38.4-17.6-73.6-49.6-97.6 6.4-19.2 14.4-38.4 24-56 38.4 6.4 76.8-6.4 104-33.6 27.2-27.2 40-65.6 33.6-104 17.6-9.6 36.8-17.6 56-24 22.4 30.4 57.6 49.6 97.6 49.6 38.4 0 73.6-17.6 97.6-49.6 19.2 6.4 38.4 14.4 56 24-6.4 38.4 6.4 76.8 33.6 104 27.2 27.2 65.6 40 104 33.6 9.6 17.6 17.6 36.8 24 56-30.4 22.4-49.6 57.6-49.6 97.6 0 38.4 17.6 73.6 49.6 97.6-6.4 19.2-14.4 38.4-24 56z"
+                        p-id="9239" fill="#ffffff"></path>
+                </svg>Data Analysis
+            </a>
+        </div>
+        <div id="menu" class="hideSide">
+            <svg onclick="toggleMenu()" class="menu-ico" t="1699709014701" class="icon" viewBox="0 0 1024 1024"
+                version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4955" width="128" height="128">
+                <path
+                    d="M892.928 128q28.672 0 48.64 19.968t19.968 48.64l0 52.224q0 28.672-19.968 48.64t-48.64 19.968l-759.808 0q-28.672 0-48.64-19.968t-19.968-48.64l0-52.224q0-28.672 19.968-48.64t48.64-19.968l759.808 0zM892.928 448.512q28.672 0 48.64 19.968t19.968 48.64l0 52.224q0 28.672-19.968 48.64t-48.64 19.968l-759.808 0q-28.672 0-48.64-19.968t-19.968-48.64l0-52.224q0-28.672 19.968-48.64t48.64-19.968l759.808 0zM892.928 769.024q28.672 0 48.64 19.968t19.968 48.64l0 52.224q0 28.672-19.968 48.64t-48.64 19.968l-759.808 0q-28.672 0-48.64-19.968t-19.968-48.64l0-52.224q0-28.672 19.968-48.64t48.64-19.968l759.808 0z"
+                    p-id="4956" fill="#666666"></path>
+            </svg>
+            <div class="search">
+                <input id="tipinput" placeholder="Search the Place" />
+                <div class="bt"><svg onclick="getAdr()" t="1699716579818" class="icon" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10359" width="16" height="16">
+                        <path
+                            d="M712.0896 726.09792a30.72 30.72 0 0 1 39.79264-17.42848c73.48224 28.672 118.51776 70.28736 118.51776 121.91744 0 97.75104-166.2976 162.69312-368.64 162.69312s-368.64-64.94208-368.64-162.69312c0-51.63008 45.056-93.22496 118.51776-121.91744a30.72 30.72 0 0 1 22.34368 57.22112c-52.4288 20.48-79.42144 45.40416-79.42144 64.7168 0 48.0256 136.27392 101.23264 307.2 101.23264s307.2-53.20704 307.2-101.25312c0-19.29216-26.97216-44.21632-79.42144-64.69632a30.72 30.72 0 0 1-17.44896-39.79264z"
+                            fill="#707070" p-id="10360"></path>
+                        <path
+                            d="M279.83872 222.76096l-3.54304 3.4816-3.4816 3.54304c-116.28544 120.15616-113.13152 311.82848 7.02464 428.09344l160.82944 155.648a87.8592 87.8592 0 0 0 122.18368 0l160.82944-155.648c2.37568-2.29376 4.7104-4.64896 7.02464-7.02464 116.28544-120.15616 113.13152-311.82848-7.02464-428.09344-123.71968-119.74656-320.1024-119.74656-443.84256 0z m42.72128 44.15488c99.90144-96.68608 258.49856-96.68608 358.4 0 95.76448 92.672 98.28352 245.4528 5.59104 341.21728l-2.7648 2.82624-163.6352 158.4128a26.4192 26.4192 0 0 1-36.7616 0l-160.82944-155.648c-95.76448-92.672-98.28352-245.4528-5.59104-341.21728l5.59104-5.59104z"
+                            fill="#707070" p-id="10361"></path>
+                        <path
+                            d="M501.76 307.2a143.36 143.36 0 1 0 0 286.72 143.36 143.36 0 0 0 0-286.72z m0 61.44a81.92 81.92 0 1 1 0 163.84 81.92 81.92 0 0 1 0-163.84z"
+                            fill="#707070" p-id="10362"></path>
+                    </svg>
+                    <svg onclick="search()" t="1699716623242" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="11482" width="16" height="16">
+                        <path
+                            d="M448 768c176.725333 0 320-143.274667 320-320 0-176.725333-143.274667-320-320-320-176.725333 0-320 143.274667-320 320 0 176.725333 143.274667 320 320 320z m0 42.666667c-200.298667 0-362.666667-162.368-362.666667-362.666667S247.701333 85.333333 448 85.333333s362.666667 162.368 362.666667 362.666667-162.368 362.666667-362.666667 362.666667z m304.917333-27.584a21.333333 21.333333 0 0 1 30.165334-30.165334l150.848 150.848a21.333333 21.333333 0 0 1-30.165334 30.165334l-150.848-150.826667z"
+                            fill="#707070" p-id="11483"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script>
+        var map;
+        var content;
+        var responseData;
+        var heatmapData = [];
+        var currentInfoWindow = null;
+        let featureLayer;
+        let infoWindow;
+        let lastInteractedFeatureIds = [];
+        let lastClickedFeatureIds = [];
+
+        let place,
+            wardName,
+            boroughName,
+            marker;
+
+
+        const styleDefault = {
+            strokeColor: '#810FCB',
+            strokeOpacity: 1.0,
+            strokeWeight: 2.0,
+            fillColor: 'white',
+            fillOpacity: 0.1,  // Polygons must be visible to receive events.
+        };
+        // Style for the clicked polygon.
+        const styleClicked = {
+            ...styleDefault,
+            fillColor: '#810FCB',
+            fillOpacity: 0.5,
+        };
+        // Style for polygon on mouse move.
+        const styleMouseMove = {
+            ...styleDefault,
+            strokeWeight: 4.0,
+        };
+        function applyStyle(/* FeatureStyleFunctionOptions */ params) {
+            const placeId = params.feature.placeId;
+            //@ts-ignore
+            if (lastClickedFeatureIds.includes(placeId)) {
+                return styleClicked;
+            }
+            //@ts-ignore
+            if (lastInteractedFeatureIds.includes(placeId)) {
+                return styleMouseMove;
+            }
+            return styleDefault;
+        }
+        function handleClick(/* MouseEvent */ e) {
+            lastClickedFeatureIds = e.features.map(f => f.placeId);
+            lastInteractedFeatureIds = [];
+            featureLayer.style = applyStyle;
+            createInfoWindow(e);
+        }
+        function handleMouseMove(/* MouseEvent */ e) {
+            lastInteractedFeatureIds = e.features.map(f => f.placeId);
+            featureLayer.style = applyStyle;
+        }
+        function createCrimeDataContent(data) {
+            return `<b>Ward:</b> ${data.WardName}<br>` +
+                `<b>Borough:</b> ${data.LookUp_BoroughName}<br>` +
+                `<b>Total Robbery Cases:</b> ${data.TotalRobberyCases}<br>` +
+                `<b>Total Theft Cases:</b> ${data.TotalTheftCases}<br>` +
+                `<b>Total Cases:</b> ${data.TotalCases}<br>` +
+                `<b>Avg Response Time I:</b> ${data.AvgResponseI}<br>` +
+                `<b>Avg Response Time S:</b> ${data.AvgResponseS}<br>` +
+                `<b>Avg Response Time E:</b> ${data.AvgResponseE}<br>` +
+                `<b>Crimes Per Thousand:</b> ${data.CrimesPerThousand}`;
+        }
+        async function createInfoWindow(event) {
+            let feature = event.features[0];
+            if (!feature.placeId) return;
+            const place = await feature.fetchPlace();
+            let content = '<span style="font-size:small">Display name: ' + place.displayName + '<br>';
+            updateInfoWindow(content, event.latLng);
+
+            let randomData = {
+                WardName: place.displayName,
+                LookUp_BoroughName: place.displayName,
+                TotalRobberyCases: randomNum(1, 99),
+                TotalTheftCases: randomNum(1, 99),
+                AvgResponseI: `${randomNum(1, 10)}ms`,
+                AvgResponseS: `${randomNum(1, 10)}ms`,
+                AvgResponseE: `${randomNum(1, 10)}ms`,
+                CrimesPerThousand: randomNum(0, 99),
+            };
+            randomData.TotalCases = randomData.TotalRobberyCases + randomData.TotalTheftCases;
+
+            //TODO: change wardName and boroughName
+            const wardName = place.displayName
+            const boroughName = place.displayName
+            const apiUrl = `http://127.0.0.1:8848/crime-data?wardName=${wardName}&boroughName=${boroughName}`;
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    content += createCrimeDataContent(data);
+                    var marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(mymap);
+                    // Create a popup with the data and open it
+                    marker.bindPopup(
+                        `<b>Ward:</b> ${data.WardName}<br>` +
+                        `<b>Borough:</b> ${data.LookUp_BoroughName}<br>` +
+                        `<b>Total Robbery Cases:</b> ${data.TotalRobberyCases}<br>` +
+                        `<b>Total Theft Cases:</b> ${data.TotalTheftCases}<br>` +
+                        `<b>Total Cases:</b> ${data.TotalCases}<br>` +
+                        `<b>Avg Response Time I:</b> ${data.AvgResponseI}<br>` +
+                        `<b>Avg Response Time S:</b> ${data.AvgResponseS}<br>` +
+                        `<b>Avg Response Time E:</b> ${data.AvgResponseE}<br>` +
+                        `<b>Crimes Per Thousand:</b> ${data.CrimesPerThousand}`
+                    ).openPopup();
+                })
+                .catch(error => {
+                    console.error('Error:', error)
+                    if (mock) {
+                        content += `mock data: <br>` + createCrimeDataContent(randomData);
+                    }
+                }).finally(() => {
+                    updateInfoWindow(content, event.latLng);
+                })
+        }
+        function updateInfoWindow(content, center) {
+            infoWindow.setContent(content);
+            infoWindow.setPosition(center);
+            infoWindow.open({
+                map,
+                shouldFocus: false,
+            });
+        }
+        function initMap() {
+            console.log("Initializing map...");
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 51.5074, lng: -0.1278 },
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            var dataLayer = new google.maps.Data();
+            dataLayer.setStyle(function(feature) {
+                var color = feature.getProperty('color');
+                return {
+                    fillColor: color,
+                    strokeWeight: 1
+                };
+            });
+            dataLayer.setMap(map);
+            // 初始化locations数组
+            var locations = [];
+            // 加载GeoJSON文件，并在加载完成后执行操作
+            map.data.loadGeoJson('http://casa0017.cetools.org:8848/Resources/londonwards.geojson', null, function (data) {
+                console.log("data", data, responseData)
+                map.data.forEach(function (feature) {
+                    content += createCrimeDataContent(data);
+                    var wardName = feature.getProperty('NAME');
+                    var boroughName = feature.getProperty('BOROUGH');
+                    console.log("Fetching data for:", wardName, boroughName);
+                });
+            });
+
+            map.data.addListener('click', function (event) {
+                var feature = event.feature;
+                var wardName = feature.getProperty('NAME');
+                var boroughName = feature.getProperty('BOROUGH');
+
+                if (currentInfoWindow) {
+                    currentInfoWindow.close();
+                }
+                fetchCrimeData(wardName, boroughName, function (response) {
+                    var content = "Ward: " + response.wardName +
+                        "<br/>Borough: " + response.boroughName +
+                        "<br/>Theft Cases: " + response.TotalTheftCases +
+                        "<br/>Robbery Cases: " + response.TotalRobberyCases +
+                        "<br/>Crimes per thousand people: " + response.CrimesPerThousand +
+                        "<br/>Response Time (s): " + response.AvgResponseI;
+                    var infowindow = new google.maps.InfoWindow({
+                        content: content,
+                        position: event.latLng
+                    });
+                    infowindow.open(map);
+                    currentInfoWindow = infowindow;
+                });
+
+
+            });
+            // map.data.loadGeoJson('/Users/tangqingyao/Desktop/londonwards.geojson');
+            // ADMINISTRATIVE_AREA_LEVEL_2 || LOCALITY
+            featureLayer = map.getFeatureLayer('LOCALITY');
+            featureLayer.addListener('click', handleClick);
+            featureLayer.addListener('mousemove', handleMouseMove);
+            map.addListener('mousemove', () => {
+                if (lastInteractedFeatureIds?.length) {
+                    lastInteractedFeatureIds = [];
+                    featureLayer.style = applyStyle;
+                }
+            });
+            featureLayer.style = applyStyle;
+            console.log(featureLayer.style, "aaaa")
+            const iconBase =
+                "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
+            const icons = ['http://webapi.amap.com/theme/v1.3/m2.png', 'http://webapi.amap.com/theme/v1.3/m1.png', 'http://webapi.amap.com/theme/v1.3/m3.png',
+            ]
+            console.log(icons[0])
+
+            infoWindow = new google.maps.InfoWindow({
+                content: '<div style="border:1px solid #dbdbdb;padding:20px;width:260px;background:#ffff"><p style="margin:0;font-size:16px;">E20 1EJ</p><p style="margin:2px 0;font-weight:bold;">Response speed</p><p style="display:flex;justify-content:space-between;margin:2px 0">Robbery <span>60</span></p><p style="display:flex;margin:2px 0;justify-content:space-between">Theft <span>105</span></p></div>',
+                maxWidth: 200
+            });
+
+            // var heatmap = new google.maps.visualization.HeatmapLayer({
+            //     data: heatmapData,
+            //     map: map
+            // });
+
+            console.log("Map initialized.");
+        }
+        window.initMap = initMap;
+        function fetchCrimeData(wardName, boroughName, callback) {
+            var apiUrl = `http://casa0017.cetools.org:8848/crime-data?wardName=${wardName}&boroughName=${boroughName}`;
+            console.log("API URL:", apiUrl);
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    responseData = data
+                    console.log("API Response for", wardName, boroughName, ":", data);
+                    var TotalCases = data.TotalCases;
+                    var AvgResponseE = data.AvgResponseE;
+                    var AvgResponseI = data.AvgResponseI;
+                    var AvgResponseS = data.AvgResponseS;
+                    var CrimesPerThousand = data.CrimesPerThousand;
+                    var TotalTheftCases = data.TotalTheftCases;
+                    var TotalRobberyCases = data.TotalRobberyCases;
+                    var responseObj = {
+                        wardName: wardName,
+                        boroughName: boroughName,
+                        AvgResponseE: data.AvgResponseE,
+                        AvgResponseI: data.AvgResponseI,
+                        AvgResponseS: data.AvgResponseS,
+                        TotalTheftCases: data.TotalTheftCases,
+                        TotalRobberyCases: data.TotalRobberyCases,
+                        CrimesPerThousand: data.CrimesPerThousand
+                    };
+                    heatmapData.push({ location: new google.maps.LatLng(data.latitude, data.longitude), weight: TotalCases });
+                    callback(responseObj);
+                })
+                .catch(error => {
+                    console.error("Error fetching data for", wardName, boroughName, ":", error);
+                });
+        }
+        function toggleMenu() {
+            var side = document.getElementById('sidebar');
+            if (side.getAttribute('class').indexOf('hide') > -1) {
+                side.className = side.className.replace('hide', 'show');
+            } else {
+                side.className = side.className.replace('show', 'hide');
+            }
+            var menu = document.getElementById('menu');
+            if (menu.getAttribute('class').indexOf('hide') > -1) {
+                menu.className = menu.className.replace('hideSide', 'showSide');
+            } else {
+                menu.className = menu.className.replace('showSide', 'hideSide');
+            }
+        }
+        function getAdr() {
+            if (window.navigator.geolocation) {
+                //获取当前位置..
+                //如果获取位置成功，会调用名字为successPosition 的方法.
+                navigator.geolocation.getCurrentPosition
+                    (successPosition, errorPosition);
+            } else {
+                alert("您当前的浏览器不支持..");
+            }
+            function successPosition(position) {
+                var jd = position.coords.longitude;//经度
+                var wd = position.coords.latitude;//纬度
+                console.log(jd, wd)
+                var darwin = new google.maps.LatLng(wd, jd);
+                map.setCenter(darwin);
+            }
+            //如果没有获取到位置，就会调用这个方法
+            function errorPosition() {
+                alert("获取位置失败.");
+            }
+        }
+        function goDataAnalysis(){
+            window.open('http://casa0017.cetools.org:8848/DataAnalyze.html')
+        }
+    </script>
+</body>
+
+</html>
