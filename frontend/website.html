@@ -13,6 +13,7 @@
 <script>
     var map;
     var heatmapData = [];
+    var currentInfoWindow = null;
 
     function initMap() {
         console.log("Initializing map...");
@@ -23,24 +24,38 @@
         });
 
         // 加载GeoJSON文件，并在加载完成后执行操作
-        map.data.loadGeoJson('http://localhost:8000/workshopgroup/londonwards.geojson', null, function() {
+        map.data.loadGeoJson('http://casa0017.cetools.org:8848/Resources/londonwards.geojson', null, function() {
             map.data.forEach(function(feature) {
                 var wardName = feature.getProperty('NAME');
                 var boroughName = feature.getProperty('BOROUGH');
                 console.log("Fetching data for:", wardName, boroughName);
-                fetchCrimeData(wardName, boroughName);
             });
         });
 
         map.data.addListener('click', function(event) {
             var feature = event.feature;
-            var content = "Ward: " + feature.getProperty('NAME') +
-                          "<br/>Borough: " + feature.getProperty('BOROUGH');
-            var infowindow = new google.maps.InfoWindow({
-                content: content,
-                position: event.latLng
+            var wardName = feature.getProperty('NAME');
+            var boroughName = feature.getProperty('BOROUGH');
+            
+            if (currentInfoWindow) {
+                currentInfoWindow.close();
+            }
+            fetchCrimeData(wardName, boroughName, function(response){
+                var content = "Ward: " + response.wardName +
+                          "<br/>Borough: " + response.boroughName +
+                          "<br/>Theft Cases: " + response.TotalTheftCases+
+                          "<br/>Robbery Cases: " + response.TotalRobberyCases+
+                          "<br/>Crimes per thousand people: " + response.CrimesPerThousand+
+                          "<br/>Response Time (s): " + response.AvgResponseI;
+                var infowindow = new google.maps.InfoWindow({
+                    content: content,
+                    position: event.latLng
+                }); 
+                infowindow.open(map);
+                currentInfoWindow = infowindow;    
             });
-            infowindow.open(map);
+
+            
         });
 
         var heatmap = new google.maps.visualization.HeatmapLayer({
@@ -51,15 +66,32 @@
         console.log("Map initialized.");
     }
 
-    function fetchCrimeData(wardName, boroughName) {
+    function fetchCrimeData(wardName, boroughName, callback) {
         var apiUrl = `http://casa0017.cetools.org:8848/crime-data?wardName=${wardName}&boroughName=${boroughName}`;
         console.log("API URL:", apiUrl);
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
                 console.log("API Response for", wardName, boroughName, ":", data);
-                var crimeCount = data.TotalCases;
-                heatmapData.push({location: new google.maps.LatLng(data.latitude, data.longitude), weight: crimeCount});
+                var TotalCases = data.TotalCases;
+                var AvgResponseE = data.AvgResponseE;
+                var AvgResponseI = data.AvgResponseI;
+                var AvgResponseS = data.AvgResponseS;
+                var CrimesPerThousand = data.CrimesPerThousand;
+                var TotalTheftCases = data.TotalTheftCases;
+                var TotalRobberyCases = data.TotalRobberyCases;
+                var responseObj = {
+                    wardName: wardName,
+                    boroughName : boroughName,
+                    AvgResponseE : data.AvgResponseE,
+                    AvgResponseI : data.AvgResponseI,
+                    AvgResponseS : data.AvgResponseS,
+                    TotalTheftCases : data.TotalTheftCases,
+                    TotalRobberyCases : data.TotalRobberyCases,
+                    CrimesPerThousand : data.CrimesPerThousand
+                };
+                heatmapData.push({location: new google.maps.LatLng(data.latitude, data.longitude), weight: TotalCases});
+                callback(responseObj);
             })
             .catch(error => {
                 console.error("Error fetching data for", wardName, boroughName, ":", error);
