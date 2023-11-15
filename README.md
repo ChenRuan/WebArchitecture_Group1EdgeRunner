@@ -5,11 +5,11 @@ In this project, we delve into the realm of connected environments by developing
 
 By harnessing the power of data analytics and interactive web technologies, we aim to provide valuable insights for policymakers, law enforcement, and the public. This project not only enhances understanding of crime patterns but also fosters a more informed and engaged community, contributing to the broader goal of creating safer, more connected urban spaces.
 
-# Background
+## Background
 
 In today's urban landscape, escalating crime rates, particularly in major cities like London, pose an increasingly severe issue. Criminal activities, especially theft and robbery, not only inflict financial losses on victims but can also have long-lasting psychological and physical impacts. Moreover, the frequent occurrence of such crimes undermines the overall sense of safety and stability in society. Therefore, raising public awareness of high-risk areas and understanding the efficiency of police response in different regions is crucial for preventing and reducing crime.
 
-# Objectives
+## Objectives
 
 This project aims to develop an interactive web application to query and display the number of theft and robbery crimes and police response times across different areas in London. The main objectives of the project include:
 Enhancing Public Safety Awareness: 
@@ -29,7 +29,7 @@ Motivate public participation in maintaining community safety and raise awarenes
 
 By achieving these objectives, the project not only offers an essential information resource for London's residents and visitors but also provides local government and law enforcement agencies with a tool to deploy resources more effectively and enhance police response efficiency, thus better serving the community. This proactive approach to crime awareness and prevention is expected to foster a safer and more informed society.
 
-# Storyboarding
+## Storyboarding
 
 1. Landing View:
 The user is greeted with a full-screen map centered on London.
@@ -149,4 +149,20 @@ Additionally, the ward names obtained from the government-provided database do n
 
 # Bibliography  
 
+1. Great London Authority ,2018. Statistical GIS Boundary Files for London: [online] Available at: https://data.london.gov.uk/publisher/gla (Accessed 13 Nov. 2023) 
+
+2. Metropolitan Police Service, 2023. Recorded Crime: Geographic Breakdown: [Online] Available at: https://data.london.gov.uk/dataset/recorded_crime_summary (Accessed: 24 Oct. 2023) 
+
+3. Metropolitan Police Service, n.d. Average Response Times to Emergency Incidents by Borough from 2019 to 2021: [Online] Available at: https://www.met.police.uk/foi-ai/metropolitan-police/d/march-2022/average-response-times-emergency-incidents-borough-2019-2021/ (Accessed: 7 Nov. 2023) 
+
+4. ONS, 2023. Estimates for London wards and LSOAs: Available at: https://data.london.gov.uk/census/2021-ward-and-lsoa-estimates/ (Accessed: 7 Nov. 2023) 
+
+5. Plotly, n.d. Scatter Plots in JavaScript: Available at: https://plotly.com/javascript/line-and-scatter/  (Accessed: 13 Nov. 2023) 
+
 # Declaration of Authorship 
+
+We, Chen Ruan, Lianglei Liu, Qingyao Tang , confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work. 
+
+Chen Ruan, Lianglei Liu, Qingyao Tang
+
+15/11/2023 
