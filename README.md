@@ -5,11 +5,57 @@ In this project, we delve into the realm of connected environments by developing
 
 By harnessing the power of data analytics and interactive web technologies, we aim to provide valuable insights for policymakers, law enforcement, and the public. This project not only enhances understanding of crime patterns but also fosters a more informed and engaged community, contributing to the broader goal of creating safer, more connected urban spaces.
 
+# Background
+
+In today's urban landscape, escalating crime rates, particularly in major cities like London, pose an increasingly severe issue. Criminal activities, especially theft and robbery, not only inflict financial losses on victims but can also have long-lasting psychological and physical impacts. Moreover, the frequent occurrence of such crimes undermines the overall sense of safety and stability in society. Therefore, raising public awareness of high-risk areas and understanding the efficiency of police response in different regions is crucial for preventing and reducing crime.
+
+# Objectives
+
+This project aims to develop an interactive web application to query and display the number of theft and robbery crimes and police response times across different areas in London. The main objectives of the project include:
+Enhancing Public Safety Awareness: 
+By providing easily accessible and understandable crime data, the application aims to alert the public to be extra vigilant about their personal and property safety in certain areas.
+
+Data Visualization: 
+Utilize maps and other visual tools to intuitively present crime data, enabling users to quickly identify high-risk areas.
+
+Offering Real-time Data: 
+Integrate the latest crime and policing data to provide users with timely updated information.
+
+Assisting in Decision Making: 
+Provide valuable data to residents, tourists, businesses, and government agencies, aiding them in making more informed decisions, such as planning travel routes, business layouts, or safety measures.
+
+Encouraging Community Engagement and Crime Prevention: 
+Motivate public participation in maintaining community safety and raise awareness about crime prevention.
+
+By achieving these objectives, the project not only offers an essential information resource for London's residents and visitors but also provides local government and law enforcement agencies with a tool to deploy resources more effectively and enhance police response efficiency, thus better serving the community. This proactive approach to crime awareness and prevention is expected to foster a safer and more informed society.
+
+# Storyboarding
+
+1. Landing View:
+The user is greeted with a full-screen map centered on London.
+The simple toolbar includes location and search functions, which can confirm the user's location in real time, as well as search data for the area the user wants.
+2. Interaction with the Map:
+Users can interact with the map by zooming in/out and clicking on specific wards.
+3. Selecting an Area:
+Clicking on a ward brings up the sidebar with detailed information, including theft and robbery counts, average police response times, and crimes per thousand people.
+4. Data Analysis:
+Click on 'Data Analysis' to go to the Data analysis page to see the connection between the number of crimes and the speed of response.
+
 # Design
 
 ## Outline of Website
 
 The project encompasses two distinct yet interconnected web pages. 
+
+The design of the crime data visualization web application is focused on user-friendliness, clarity, and efficiency. The interface is structured to provide intuitive navigation and immediate access to key information. The design is anchored on the following elements:
+
+Interactive Map: Central to the design is an interactive map displaying London's various wards. The map serves as the primary tool for visualizing crime data geographically.
+
+The sidebar provides buttons to switch to Data Analysis: a retractable sidebar where clicking on Data Analysis takes you to the Data Analysis page.
+
+Responsive Design: The layout is responsive, ensuring usability across various devices, from desktops to mobile phones.
+
+Minimalistic Aesthetics: A clean and modern look is maintained, avoiding clutter, to enhance user experience.
 
 ### Interactive Crime Rate Map
 
