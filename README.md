@@ -1,4 +1,11 @@
 # EdgeRunner_GroupReport
+
+# Abstract
+
+This project presents an innovative approach to urban crime awareness in London, introducing a website that displays real-time crime statistics, including thefts, robberies, and police response times. The primary objective is to enhance public understanding and awareness of safety and crime dynamics within the city. The website features a user-friendly and aesthetically pleasing interface, crafted with contemporary design trends and technologies. It ensures a responsive and consistent user experience across various devices and browsers.
+
+A notable feature of the website is the integration of the Google Maps API, facilitating a dynamic and interactive visualization of crime data across different areas of London. This functionality allows users to view and analyze crime patterns in near-real-time, enabling informed decisions and awareness.
+
 # Introduction
 
 In this project, we delve into the realm of connected environments by developing an interactive platform that integrates and visualizes crime data in London. Our focus is on creating a dynamic interface where users can explore the intricate relationship between crime rates, emergency response times, and demographic data across different wards of the city. This initiative is rooted in the concept of a connected environment, where data from diverse sources is amalgamated to offer a comprehensive view of urban safety dynamics.
@@ -148,16 +155,17 @@ Firstly, our user interface graphics lack uniformity and deviate significantly f
 Additionally, the ward names obtained from the government-provided database do not match the district-level addresses provided by the map API. This results in many areas on our map being unable to retrieve data, significantly impacting the presentation of our data on the map. If a suitable API that aligns with the government's Ward planning is identified, this issue can be better addressed. 
 
 # Bibliography  
+1.Google. (2023). Google Maps [Software]. Available from https://cloud.google.com/maps-platform/（Accessed 14 Nov. 2023）
 
-1. Great London Authority ,2018. Statistical GIS Boundary Files for London: [online] Available at: https://data.london.gov.uk/publisher/gla (Accessed 13 Nov. 2023) 
+2. Great London Authority ,2018. Statistical GIS Boundary Files for London: [online] Available at: https://data.london.gov.uk/publisher/gla (Accessed 13 Nov. 2023) 
 
-2. Metropolitan Police Service, 2023. Recorded Crime: Geographic Breakdown: [Online] Available at: https://data.london.gov.uk/dataset/recorded_crime_summary (Accessed: 24 Oct. 2023) 
+3. Metropolitan Police Service, 2023. Recorded Crime: Geographic Breakdown: [Online] Available at: https://data.london.gov.uk/dataset/recorded_crime_summary (Accessed: 24 Oct. 2023) 
 
-3. Metropolitan Police Service, n.d. Average Response Times to Emergency Incidents by Borough from 2019 to 2021: [Online] Available at: https://www.met.police.uk/foi-ai/metropolitan-police/d/march-2022/average-response-times-emergency-incidents-borough-2019-2021/ (Accessed: 7 Nov. 2023) 
+4. Metropolitan Police Service, n.d. Average Response Times to Emergency Incidents by Borough from 2019 to 2021: [Online] Available at: https://www.met.police.uk/foi-ai/metropolitan-police/d/march-2022/average-response-times-emergency-incidents-borough-2019-2021/ (Accessed: 7 Nov. 2023) 
 
-4. ONS, 2023. Estimates for London wards and LSOAs: Available at: https://data.london.gov.uk/census/2021-ward-and-lsoa-estimates/ (Accessed: 7 Nov. 2023) 
+5. ONS, 2023. Estimates for London wards and LSOAs: Available at: https://data.london.gov.uk/census/2021-ward-and-lsoa-estimates/ (Accessed: 7 Nov. 2023) 
 
-5. Plotly, n.d. Scatter Plots in JavaScript: Available at: https://plotly.com/javascript/line-and-scatter/  (Accessed: 13 Nov. 2023) 
+6. Plotly, n.d. Scatter Plots in JavaScript: Available at: https://plotly.com/javascript/line-and-scatter/  (Accessed: 13 Nov. 2023) 
 
 # Declaration of Authorship 
 
