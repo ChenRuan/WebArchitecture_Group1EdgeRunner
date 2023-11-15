@@ -358,7 +358,7 @@
             };
             randomData.TotalCases = randomData.TotalRobberyCases + randomData.TotalTheftCases;
 
-            //TODO: change wardName and boroughName
+            //change wardName and boroughName
             const wardName = place.displayName
             const boroughName = place.displayName
             const apiUrl = `http://127.0.0.1:8848/crime-data?wardName=${wardName}&boroughName=${boroughName}`;
@@ -401,7 +401,9 @@
             console.log("Initializing map...");
             map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 51.5074, lng: -0.1278 },
-                zoom: 10,
+                zoom: 13,
+                streetViewControl : false,
+                fullscreenControl : false,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
             var dataLayer = new google.maps.Data();
