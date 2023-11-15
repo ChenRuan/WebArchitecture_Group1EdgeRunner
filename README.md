@@ -1,5 +1,9 @@
 # EdgeRunner_GroupReport
 
+The link to our website: http://casa0017.cetools.org:8848/index.html
+
+The link to our GitHub: https://github.com/ChenRuan/WebArchitecture_Group1EdgeRunner
+
 # Abstract
 
 This project presents an innovative approach to urban crime awareness in London, introducing a website that displays real-time crime statistics, including thefts, robberies, and police response times. The primary objective is to enhance public understanding and awareness of safety and crime dynamics within the city. The website features a user-friendly and aesthetically pleasing interface, crafted with contemporary design trends and technologies. It ensures a responsive and consistent user experience across various devices and browsers.
@@ -155,7 +159,7 @@ Firstly, our user interface graphics lack uniformity and deviate significantly f
 Additionally, the ward names obtained from the government-provided database do not match the district-level addresses provided by the map API. This results in many areas on our map being unable to retrieve data, significantly impacting the presentation of our data on the map. If a suitable API that aligns with the government's Ward planning is identified, this issue can be better addressed. 
 
 # Bibliography  
-1.Google. (2023). Google Maps [Software]. Available from https://cloud.google.com/maps-platform/（Accessed 14 Nov. 2023）
+1. Google. (2023). Google Maps [Software]. Available from https://cloud.google.com/maps-platform/（Accessed 14 Nov. 2023）
 
 2. Great London Authority ,2018. Statistical GIS Boundary Files for London: [online] Available at: https://data.london.gov.uk/publisher/gla (Accessed 13 Nov. 2023) 
 
